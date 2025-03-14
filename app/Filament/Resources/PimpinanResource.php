@@ -39,12 +39,14 @@ class PimpinanResource extends Resource
                 ->image()
                 ->columnSpan(2)
                 ->required(),
+
                 TextInput::make('nama')
                 ->label('Nama Pimpinan Dan Gelar')
                 ->helperText('Maks. 50 Karakter.')
                 ->minLength(5)
                 ->maxLength(50)
                 ->required(),
+
                 Select::make('status')
                 ->label('Status Jabatan')
                 ->options([
@@ -56,14 +58,25 @@ class PimpinanResource extends Resource
                 ->reactive()
                 ->placeholder('Pilih status jabatan')
                 ->required(),
+
+                Select::make('id_fakultas')
+                ->label('Nama Fakultas Pimpinan')
+                ->relationship('fakultas', 'nama_fakultas')
+                ->helperText('Pilih Fakultas Sesuai Dengan Pimpinan')
+                ->placeholder('Pilih fakultas pimpinan')
+                ->visible(fn ($get) => $get('status') === 'Dekan' || $get('status') === 'Kepala Prodi')
+                ->required(fn ($get) => $get('status') === 'Dekan' || $get('status') === 'Kepala Prodi'),
+                
                 TextInput::make('bidang')
                 ->label('Nama Bidang Pimpinan')
                 ->helperText('Maks. 50 Karakter.')
                 ->minLength(5)
                 ->maxLength(50)
                 ->columnSpan(2)
-                ->visible(fn ($get) => $get('status') === 'Dekan')
-                ->required(fn ($get) => $get('status') === 'Dekan'),
+                ->unique()
+                ->visible(fn ($get) => $get('status') === 'Wakil Rektor')
+                ->required(fn ($get) => $get('status') === 'Wakil Rektor'),
+
                 TiptapEditor::make('kata_sambutan')
                 ->label('Kata Sambutan Pimpinan')
                 ->tools([
@@ -74,8 +87,7 @@ class PimpinanResource extends Resource
                 ->columnSpan(2)
                 ->disableFloatingMenus()
                 ->disableBubbleMenus()
-                ->visible(fn ($get) => $get('status') === 'Rektor' || $get('status') === 'Dekan')
-                ->required(fn ($get) => $get('status') === 'Rektor' || $get('status') === 'Dekan'),
+                ->visible(fn ($get) => $get('status') === 'Rektor' || $get('status') === 'Dekan'),
             ]);
     }
 
@@ -90,6 +102,10 @@ class PimpinanResource extends Resource
                 ->wrap(),
                 TextColumn::make('status')
                 ->label('Jabatan')
+                ->wrap()
+                ->sortable(),
+                TextColumn::make('fakultas.nama_fakultas')
+                ->label('Nama Fakultas')
                 ->wrap()
                 ->sortable(),
                 TextColumn::make('bidang')

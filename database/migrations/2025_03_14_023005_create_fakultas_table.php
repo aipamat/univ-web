@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pimpinans', function (Blueprint $table) {
+        Schema::create('fakultas', function (Blueprint $table) {
             $table->id();
-            $table->string('foto');
-            $table->string('nama');
-            $table->enum('status', ['Rektor', 'Wakil Rektor', 'Dekan', 'Kepala Prodi']);
-            $table->string('bidang')->nullable();
-            $table->string('kata_sambutan')->nullable();
+            $table->string('nama_fakultas');
+            $table->string('deskripsi');
+            $table->string('banner');
+            $table->string('display');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pimpinans');
+        Schema::dropIfExists('fakultas');
     }
 };
