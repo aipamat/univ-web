@@ -19,7 +19,13 @@ return new class extends Migration
             $table->foreignId('id_fakultas')
                   ->constrained('fakultas')
                   ->onDelete('cascade')
-                  ->onUpdate('cascade');
+                  ->onUpdate('cascade')
+                  ->nullable();
+            $table->foreignId('id_prodi')
+                  ->constrained('program_studis')
+                  ->onDelete('cascade')
+                  ->onUpdate('cascade')
+                  ->nullable();
             $table->string('bidang')->nullable();
             $table->string('kata_sambutan')->nullable();
             $table->timestamps();

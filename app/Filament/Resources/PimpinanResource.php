@@ -46,7 +46,7 @@ class PimpinanResource extends Resource
                 ->minLength(5)
                 ->maxLength(50)
                 ->required(),
-
+   
                 Select::make('status')
                 ->label('Status Jabatan')
                 ->options([
@@ -64,16 +64,27 @@ class PimpinanResource extends Resource
                 ->relationship('fakultas', 'nama_fakultas')
                 ->helperText('Pilih Fakultas Sesuai Dengan Pimpinan')
                 ->placeholder('Pilih fakultas pimpinan')
+                ->columnSpan(2)
+                ->reactive()
                 ->visible(fn ($get) => $get('status') === 'Dekan' || $get('status') === 'Kepala Prodi')
                 ->required(fn ($get) => $get('status') === 'Dekan' || $get('status') === 'Kepala Prodi'),
                 
+                Select::make('id_prodi')
+                ->label('Program Studi')
+                ->options(fn ($get) => \App\Models\ProgramStudi::where('id_fakultas', $get('id_fakultas'))->pluck('nama_prodi', 'id'))
+                ->placeholder('Pilih program studi')
+                ->reactive()
+                ->columnSpan(2)
+                ->visible(fn ($get) => $get('status') === 'Kepala Prodi' && $get('id_fakultas'))
+                ->required(fn ($get) => $get('status') === 'Kepala Prodi' && $get('id_fakultas')),
+
                 TextInput::make('bidang')
                 ->label('Nama Bidang Pimpinan')
                 ->helperText('Maks. 50 Karakter.')
                 ->minLength(5)
                 ->maxLength(50)
-                ->columnSpan(2)
                 ->unique()
+                ->columnSpan(2)
                 ->visible(fn ($get) => $get('status') === 'Wakil Rektor')
                 ->required(fn ($get) => $get('status') === 'Wakil Rektor'),
 
@@ -108,6 +119,10 @@ class PimpinanResource extends Resource
                 ->label('Nama Fakultas')
                 ->wrap()
                 ->sortable(),
+                TextColumn::make('programStudi.nama_prodi')
+                ->label('Program Studi')
+                ->sortable()
+                ->wrap(),
                 TextColumn::make('bidang')
                 ->label('Bidang')
                 ->wrap()
