@@ -47,16 +47,18 @@ class PimpinanResource extends Resource
                 ->maxLength(50)
                 ->required(),
    
-                Select::make('status')
+                TextInput::make('status')
                 ->label('Status Jabatan')
-                ->options([
-                    'Rektor' => 'Rektor',
-                    'Wakil Rektor' => 'Wakil Rektor',
-                    'Dekan' => 'Dekan',
-                    'Kepala Prodi' => 'Kepala Prodi',
+                ->placeholder('Pilih atau ketik status jabatan')
+                ->datalist([
+                    'Rektor',
+                    'Ketua Senat',
+                    'Wakil Rektor I',
+                    'Wakil Rektor II',
+                    'Dekan',
+                    'Kepala Prodi',
                 ])
                 ->reactive()
-                ->placeholder('Pilih status jabatan')
                 ->required(),
 
                 Select::make('id_fakultas')
@@ -83,10 +85,10 @@ class PimpinanResource extends Resource
                 ->helperText('Maks. 50 Karakter.')
                 ->minLength(5)
                 ->maxLength(50)
-                ->unique()
                 ->columnSpan(2)
-                ->visible(fn ($get) => $get('status') === 'Wakil Rektor')
-                ->required(fn ($get) => $get('status') === 'Wakil Rektor'),
+                ->visible(fn ($get) => str_starts_with($get('status'), 'Wakil Rektor'))
+                ->required(fn ($get) => str_starts_with($get('status'), 'Wakil Rektor')),
+
 
                 TiptapEditor::make('kata_sambutan')
                 ->label('Kata Sambutan Pimpinan')

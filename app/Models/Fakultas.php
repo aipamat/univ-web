@@ -18,7 +18,19 @@ class Fakultas extends Model
 
     public function programStudi()
     {
-        return $this->hasMany(ProgramStudi::class, 'id_fakultas');
+        return $this->hasMany(ProgramStudi::class, 'id_fakultas', 'id');
+    }
+
+    public function dekan()
+    {
+        return $this->hasOne(Pimpinan::class, 'id_fakultas', 'id')
+                    ->where('status', 'Dekan');
+    }
+
+    public function daftarKaprodi()
+    {
+        return $this->hasMany(Pimpinan::class, 'id_fakultas', 'id')
+                    ->where('status', 'Kepala Prodi');
     }
 
 }

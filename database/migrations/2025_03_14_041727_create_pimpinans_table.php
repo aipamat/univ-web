@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('foto');
             $table->string('nama');
-            $table->enum('status', ['Rektor', 'Wakil Rektor', 'Dekan', 'Kepala Prodi']);
+            $table->enum('status', ['Rektor', 'Ketua Senat', 'Wakil Rektor', 'Dekan', 'Kepala Prodi']);
             $table->foreignId('id_fakultas')
                   ->constrained('fakultas')
                   ->onDelete('cascade')

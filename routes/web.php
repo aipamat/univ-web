@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\TentangKampusController;
+use App\Http\Controllers\FakultasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,11 @@ Route::get('/tentang-kampus', function () {
 });
 
 Route::get('/tentang-kampus', [TentangKampusController::class, 'index']);
+
+Route::get('/fakultas', function () {
+    return view('fakultas/fakultas');
+});
+
+Route::get('/fakultas', [FakultasController::class, 'index']);
+
+Route::get('/fakultas/{id}', [FakultasController::class, 'show'])->name('fakultas.detail');

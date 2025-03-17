@@ -22,6 +22,7 @@ class Pimpinan extends Model
         'kata_sambutan'
     ];
 
+    
     /**
      * Relasi ke tabel Fakultas
      */

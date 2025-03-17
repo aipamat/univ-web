@@ -2,15 +2,17 @@
 <html class="no-js" lang="en">
 
 <head>
-    <title>International Women University | Tentang Kampus</title>
+    <title>International Women University | Fakultas Sains dan Teknologi</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="ThemeZaa">
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description"
+        content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 52+ ready demos.">
     <!-- favicon icon -->
     <link rel="shortcut icon" href="{{ asset('images/IWU/logo.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/IWU/logo.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/IWU/logo.png') }}">
-
     <!-- google fonts preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,28 +110,28 @@
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li>
-                                        <a href="#visi-misi">
+                                        <a href="tentang-kampus#visi-misi">
                                             <div class="submenu-icon-content">
                                                 <span>Visi Misi</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#pimpinan">
+                                        <a href="tentang-kampus#pimpinan">
                                             <div class="submenu-icon-content">
                                                 <span>Pimpinan</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#struktur-organisasi">
+                                        <a href="tentang-kampus#struktur-organisasi">
                                             <div class="submenu-icon-content">
                                                 <span>Struktur Organisasi</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#kerja-sama">
+                                        <a href="tentang-kampus#kerja-sama">
                                             <div class="submenu-icon-content">
                                                 <span>Kerja Sama</span>
                                             </div>
@@ -195,186 +197,95 @@
     </header>
     <!-- end header -->
     <!-- start page title -->
-    <section
-        class="page-title-separate-breadcrumbs cover-background border-top border-4 border-color-base-color top-space-margin"
-        style="background-image:url('{{ Storage::url($tentangKampusItems->banner) }}')">
-        <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
-        <div class="container position-relative">
-            <div class="row align-items-start align-items-lg-end justify-content-end flex-column flex-lg-row extra-small-screen"
-                data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                <div class="col-xxl-7 col-lg-6 col-md-10 position-relative page-title-large md-mb-15px xs-mb-5px">
-                    <h1 class="text-white alt-font fw-500 ls-minus-2px mb-0">Tentang Kampus</h1>
-                </div>
-                <div class="col-xxl-5 col-lg-6 col-md-10 last-paragraph-no-margin">
-                    <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100">{{ $tentangKampusItems->deskripsi }}</p>
-                </div>
+<section
+    class="page-title-separate-breadcrumbs cover-background border-top border-4 border-color-base-color top-space-margin magic-cursor round-cursor"
+    style="background-image: url('{{Storage::url($fakultas->banner)}}')">
+    <div class="opacity-full bg-gradient-dark-transparent"></div>
+    <div class="container position-relative">
+        <div class="row align-items-start align-items-lg-end justify-content-end flex-column flex-lg-row extra-small-screen">
+            <div class="col-xxl-7 col-lg-6 col-md-10 position-relative page-title-large md-mb-10px xs-mb-5px">
+                <h1 class="text-white alt-font fw-500 ls-minus-2px mb-0">{{ $fakultas->nama_fakultas }}</h1>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!-- end page title -->
 
-    <!-- end page title -->
-    <!-- start section -->
-    <section id="visi-misi" class="background-position-center background-repeat overlap-height pb-5"
-        style="background-image: url('images/vertical-center-line-bg.svg')">
-        <div class="container overlap-gap-section">
-            <div class="row">
-                <div class="col-xl-10 col-md-6 offset-xl-1 last-paragraph-no-margin"
-                    data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                    <h5 class="alt-font text-dark-gray mb-10px">Visi</h5>
-                    <!-- Menambahkan kelas 'text-justify' -->
-                    <p class="w-100 lg-w-100 text-justify">{!!$visiMisiTujuanItems->visi!!}</p>
-                </div>
-                <div class="col-xl-10 col-md-6 offset-xl-1 last-paragraph-no-margin mt-3"
-                    data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                    <h5 class="alt-font text-dark-gray mb-10px">Misi</h5>
-                    <!-- Menambahkan kelas 'text-justify' -->
-                    <p class="w-100 lg-w-100 text-justify">{!!$visiMisiTujuanItems->misi!!}</p>
-                </div>
-                <div class="col-xl-10 col-md-6 offset-xl-1 last-paragraph-no-margin mt-3"
-                    data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                    <h5 class="alt-font text-dark-gray mb-10px">Tujuan</h5>
-                    <!-- Menambahkan kelas 'text-justify' -->
-                    <p class="w-100 lg-w-100 text-justify">{!!$visiMisiTujuanItems->tujuan!!}</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end section -->
-
-
-
-
-    <!-- start section -->
-    <section id="pimpinan" class="bg-very-light-gray background-position-center background-repeat position-relative"
-        style="background-image: url('images/vertical-center-line-bg.svg')">
-        <div class="container">
-            <div class="row justify-content-center mb-6 xs-mb-9">
-                <div class="col-md-8 text-center"
-                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <h2 class="alt-font mb-5px text-dark-gray ls-minus-2px">Pimpinan IWU</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center mb-5 xs-mb-8 d-flex align-items-center">
-                <!-- start fancy text box item (Rektor) -->
-                <div class="col-12 col-md-4"
-                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <div class="hover-box md-mb-30px">
-                        <img class="w-50 mx-auto d-block" src="{{ Storage::url($pimpinanRektorItems->foto) }}" alt="Rektor">
-                        <div class="p-30px last-paragraph-no-margin text-center">
-                            <span class="d-inline-block fs-22 alt-font">{{$pimpinanRektorItems->status}}</span>
-                            <p></p>
-                            <span class="text-dark">{{$pimpinanRektorItems->nama}}</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- end fancy text box item (Rektor) -->
-            </div>
-
-            <div class="row justify-content-center mb-5 xs-mb-8 d-flex align-items-center">
-                <!-- start fancy text box item (Rektor) -->
-                <div class="col-12 col-md-4"
-                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <div class="hover-box md-mb-30px">
-                        <img class="w-50 mx-auto d-block" src="{{ Storage::url($pimpinanKetuaSenatItems->foto) }}" alt="Rektor">
-                        <div class="p-30px last-paragraph-no-margin text-center">
-                            <span class="d-inline-block fs-22 alt-font">{{$pimpinanKetuaSenatItems->status}}</span>
-                            <p></p>
-                            <span class="text-dark">{{$pimpinanKetuaSenatItems->nama}}</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- end fancy text box item (Rektor) -->
-            </div>
-
-            <div class="row justify-content-center mb-5 xs-mb-8"
-                data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <!-- start fancy text box item (Wakil Rektor) -->
-                @foreach($pimpinanWakilRektorItems as $pimpinanWakilRektor)
-                    <div class="col-12 col-md-4 mb-30px">
-                        <div class="hover-box md-mb-30px">
-                            <img class="w-50 mx-auto d-block" src="{{ Storage::url($pimpinanWakilRektor->foto) }}" alt="Rektor">
-                            <div class="p-30px last-paragraph-no-margin text-center">
-                                <span class="d-inline-block fs-22 alt-font">{{ $pimpinanWakilRektor->status }}</span>                            
-                                    <p>{{ $pimpinanWakilRektor->bidang }}</p> 
-                                <span class="text-dark">{{ $pimpinanWakilRektor->nama }}</span>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-
-            <div class="row justify-content-center mb-5 xs-mb-8"
-                data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <!-- start fancy text box item (Wakil Rektor) -->
-                @foreach($pimpinanDekanItems as $pimpinanDekanItems)
-                    <div class="col-12 col-md-4 mb-30px">
-                        <div class="hover-box md-mb-30px">
-                            <img class="w-50 mx-auto d-block" src="{{ Storage::url($pimpinanDekanItems->foto) }}" alt="Rektor">
-                            <div class="p-30px last-paragraph-no-margin text-center">
-                                <span class="d-inline-block fs-22 alt-font">{{ $pimpinanDekanItems->status }}</span>
-                                    <span class="fs-22 alt-font"> {{ $pimpinanDekanItems->fakultas->nama_fakultas }}</span>
-                                <p></p>
-                                <span class="text-dark">{{ $pimpinanDekanItems->nama }}</span>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    <!-- end section -->
-
-    <!-- start section -->
-    <section id="struktur-organisasi" class="background-position-center background-repeat position-relative"
-        style="background-image: url('images/vertical-center-line-bg.svg')">
-        <div class="container">
-            <div class="row justify-content-center mb-6 xs-mb-9">
-                <div class="col-md-8 text-center"
-                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <h2 class="alt-font mb-5px text-dark-gray ls-minus-2px">Struktur Organisasi</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center mb-5 xs-mb-8"
-                data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-
-                <!-- Add the image with transform -->
-                <div class="col-12">
-                    <img src="{{Storage::url($strukturOrganisasiItems->gambar_struktur)}}" alt="Struktur Organisasi" class="img-fluid w-100 transform-img" />
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end section -->
-
-    <!-- end section -->
-
-    <!-- start section -->
-    <section id="kerja-sama" class="background-position-center background-repeat"
-        style="background-image: url('images/vertical-center-line-bg.svg')">
-        <div class="container">
+<!-- start section -->
+<section class="background-position-center background-repeat position-relative pb-0 overflow-hidden">
+    <div class="container">
+        <!-- Konten Foto Dekan dan Teks -->
+        <div class="container my-5">
             <div class="row justify-content-center">
-                <div class="col-md-8 text-center"
-                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <h2 class="alt-font mb-5px text-dark-gray ls-minus-2px">Kerja Sama</h2>
-                    <span class="d-inline-block">Membangun hubungan yang kuat untuk kemajuan bersama.</span>
+                <div class="col-md-4 text-center text-dark-gray">
+                    <img src="{{ $fakultas->dekan->foto ? Storage::url($fakultas->dekan->foto) : asset('images/default-profile.png') }}" alt="Foto Dekan" class="img-fluid mb-3">
+                    <span>Dekan {{ $fakultas->nama_fakultas }}</span>
+                    <p>{{ $fakultas->dekan->nama ?? 'Belum ada dekan' }}</p>
                 </div>
-            </div>
-            <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 text-center justify-content-center clients-style-05 mb-4 sm-mb-7"
-                data-anime='{ "el": "childs", "opacity": [0,1], "duration": 500, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                <!-- start client item -->
-                 @foreach($kerjaSamaItems as $kerjaSamaItems)
-                <div class="col mt-5 sm-mb-30px">
-                    <div class="client-box">
-                        <a href="#"><img src="{{ Storage::url($kerjaSamaItems->gambar) }}" class="h-200px" alt="" /></a>
-                    </div>
-                    <span class="fs-18 d-inline-block mt-30px fw-600 text-dark-gray">{{ $kerjaSamaItems->nama }}</span>
+                <div class="col-md-8">
+                    <p class="text-dark-gray">{{ $fakultas->deskripsi }}</p>
                 </div>
-                @endforeach
-                <!-- end client item -->
             </div>
         </div>
-    </section>
-    <!-- end section -->
+        <div class="h-2px bg-dark-gray mb-50px"></div>
+
+        <!-- Tabel Daftar Link Website Program Studi -->
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <table class="table table-bordered text-left">
+                        <thead class="bg-purple text-white">
+                            <tr>
+                                <th class="text-center">No</th>
+                                <th>Program Studi</th>
+                                <th class="text-center">Link Website</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($fakultas->programStudi as $index => $progStud)
+                                <tr>
+                                    <td class="text-center">{{ $index + 1 }}</td>
+                                    <td>{{ $progStud->nama_prodi }}</td>
+                                    <td class="text-center">
+                                        <a href="{{ $progStud->link_website }}" target="_blank">{{ $progStud->link_website }}</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+
+<!-- start section -->
+<section class="bg-very-light-gray background-position-center background-repeat position-relative">
+    <div class="container">
+        <div class="row justify-content-center mb-6 xs-mb-9">
+            <div class="col-md-8 text-center">
+                <span>Ketua Program Studi</span>
+                <h2 class="alt-font mb-5px text-dark-gray ls-minus-2px">{{ $fakultas->nama_fakultas }}</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-5 xs-mb-8">
+            @foreach($fakultas->daftarKaprodi as $kaprodi)
+                <div class="col-12 col-md-4 mb-30px">
+                    <div class="hover-box md-mb-30px">
+                        <img class="w-50 mx-auto d-block" src="{{ $kaprodi->foto ? Storage::url($kaprodi->foto) : asset('images/default-profile.png') }}" alt="{{ $kaprodi->nama }}">
+                        <div class="p-30px last-paragraph-no-margin text-center">
+                            <span class="d-inline-block fs-22 alt-font">{{ $kaprodi->nama_prodi }}</span>
+                            <p>{{ $kaprodi->nama }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<!-- end section -->
 
     <!-- start footer -->
     <footer class="pb-50px sm-pt-20px xs-pb-30px bg-footer">
@@ -431,11 +342,10 @@
         </div>
     </footer>
     <!-- end footer -->
-
     <!-- start scroll progress -->
     <div class="scroll-progress d-none d-xxl-block">
         <a href="#" class="scroll-top" aria-label="scroll">
-            <span class="scroll-text">Gulir</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
         </a>
     </div>
     <!-- end scroll progress -->
