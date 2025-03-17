@@ -10,7 +10,6 @@ use App\Models\FakultasDetail;
 class FakultasController extends Controller
 {
     public function index(){
-        
         // Fakultas Utama
         $fakultasUtamaItems = DisplayFakultas::first();
         $fakultasUtamaFST = Fakultas::where('nama_fakultas', 'Fakultas Sains dan Teknologi')
@@ -30,7 +29,7 @@ class FakultasController extends Controller
     public function show($id)
 {
     $fakultas = Fakultas::with(['dekan', 'programStudi', 'daftarKaprodi'])->findOrFail($id);
-
+    
     return view('fakultas.detail-fakultas', compact('fakultas'));
 }
 

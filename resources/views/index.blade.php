@@ -143,14 +143,14 @@
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li>
-                                        <a href="fakultas-fst">
+                                        <a href="fakultas#fakultas-fst">
                                             <div class="submenu-icon-content">
                                                 <span>Fakultas Sains dan Teknologi</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="fakultas-fisb">
+                                        <a href="fakultas#fakultas-fisb">
                                             <div class="submenu-icon-content">
                                                 <span>Fakultas Ilmu Sosial dan Bisnis</span>
                                             </div>
@@ -164,7 +164,7 @@
                                         </a>
                                     </li> -->
                                     <li>
-                                        <a href="fakultas-pasca">
+                                        <a href="fakultas#fakultas-pasca">
                                             <div class="submenu-icon-content">
                                                 <span>Fakultas Pascasarjana</span>
                                             </div>
