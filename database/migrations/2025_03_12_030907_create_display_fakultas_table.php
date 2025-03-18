@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('display_fakultas', function (Blueprint $table) {
             $table->id();
             $table->string('banner_utama');
-            $table->string('deskripsi');
             $table->timestamps();
         });
     }

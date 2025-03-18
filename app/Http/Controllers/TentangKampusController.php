@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TentangKampus;
+use App\Models\Fakultas;
 use App\Models\VisiMisiTujuan;
 use App\Models\Pimpinan;
 use App\Models\StrukturOrganisasi;
@@ -13,7 +14,9 @@ class TentangKampusController extends Controller
 {
     public function index()
     {
+
         $tentangKampusItems = TentangKampus::first();
+        $fakultasItems = Fakultas::all();
         $visiMisiTujuanItems = VisiMisiTujuan::first();
         $pimpinanRektorItems = Pimpinan::where('status', 'Rektor')->first();
         $pimpinanKetuaSenatItems = Pimpinan::where('status', 'Ketua Senat')->first();
@@ -24,6 +27,6 @@ class TentangKampusController extends Controller
 
         $strukturOrganisasiItems = StrukturOrganisasi::first();
         $kerjaSamaItems = KerjaSama::all();
-        return view('tentang-kampus', compact('tentangKampusItems', 'visiMisiTujuanItems', 'pimpinanRektorItems', 'pimpinanKetuaSenatItems', 'pimpinanWakilRektorItems', 'pimpinanDekanItems', 'strukturOrganisasiItems', 'kerjaSamaItems'));
+        return view('tentang-kampus', compact('tentangKampusItems', 'fakultasItems', 'visiMisiTujuanItems', 'pimpinanRektorItems', 'pimpinanKetuaSenatItems', 'pimpinanWakilRektorItems', 'pimpinanDekanItems', 'strukturOrganisasiItems', 'kerjaSamaItems'));
     }
 }

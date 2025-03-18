@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\DisplayFakultasResource\Pages;
-use App\Filament\Resources\DisplayFakultasResource\RelationManagers;
-use App\Models\DisplayFakultas;
+use App\Filament\Resources\FasilitasUtamaResource\Pages;
+use App\Filament\Resources\FasilitasUtamaResource\RelationManagers;
+use App\Models\FasilitasUtama;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Forms\Components\FileUpload;
@@ -17,14 +17,15 @@ use Filament\Tables\Columns\ImageColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class DisplayFakultasResource extends Resource
+class FasilitasUtamaResource extends Resource
 {
-    protected static ?string $model = DisplayFakultas::class;
+    protected static ?string $model = FasilitasUtama::class;
 
-    protected static ?string $navigationGroup = 'Fakultas & Program Studi';
-    protected static ?string $navigationLabel = 'Banner Utama';
+    protected static ?string $navigationGroup = 'Fasilitas';
+    protected static ?string $navigationLabel = 'Banner dan Deskripsi';
 
     protected static ?string $navigationIcon = 'heroicon-o-view-columns';
+
 
     public static function form(Form $form): Form
     {
@@ -32,10 +33,11 @@ class DisplayFakultasResource extends Resource
             ->schema([
                 FileUpload::make('banner_utama')
                 ->label('Banner Halaman Utama')
-                ->helperText('Harus ukuran (1920x525).')
+                ->helperText('Harus ukuran (1920x526).')
                 ->image()
                 ->columnSpan(2)
-                ->required(),
+                ->required()
+
             ]);
     }
 
@@ -44,12 +46,7 @@ class DisplayFakultasResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('banner_utama')
-                ->label('Banner Utama'),
-                TextColumn::make('created_at')
-                ->label('Waktu Dibuat')
-                ->dateTime('d-m-Y H:i')
-                ->timezone('Asia/Jakarta')
-                ->sortable()
+                ->label('Banner')
             ])
             ->filters([
                 //
@@ -74,9 +71,9 @@ class DisplayFakultasResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListDisplayFakultas::route('/'),
-            'create' => Pages\CreateDisplayFakultas::route('/create'),
-            'edit' => Pages\EditDisplayFakultas::route('/{record}/edit'),
+            'index' => Pages\ListFasilitasUtamas::route('/'),
+            'create' => Pages\CreateFasilitasUtama::route('/create'),
+            'edit' => Pages\EditFasilitasUtama::route('/{record}/edit'),
         ];
     }
 }

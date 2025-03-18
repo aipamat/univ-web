@@ -142,34 +142,15 @@
                                 <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li>
-                                        <a href="fakultas#fakultas-fst">
-                                            <div class="submenu-icon-content">
-                                                <span>Fakultas Sains dan Teknologi</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="fakultas#fakultas-fisb">
-                                            <div class="submenu-icon-content">
-                                                <span>Fakultas Ilmu Sosial dan Bisnis</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- <li>
-                                        <a href="fakultas-vokasi">
-                                            <div class="submenu-icon-content">
-                                                <span>Fakultas Vokasi</span>
-                                            </div>
-                                        </a>
-                                    </li> -->
-                                    <li>
-                                        <a href="fakultas#fakultas-pasca">
-                                            <div class="submenu-icon-content">
-                                                <span>Fakultas Pascasarjana</span>
-                                            </div>
-                                        </a>
-                                    </li>
+                                        @foreach($fakultasItems as $fakultasLink)
+                                            <li>
+                                                <a href="/fakultas/{{$fakultasLink->id}}">
+                                                    <div class="submenu-icon-content">
+                                                        <span>{{$fakultasLink->nama_fakultas}}</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        @endforeach
                                 </ul>
                             </li>
                         </ul>
@@ -206,15 +187,48 @@
                     <h1 class="text-white alt-font fw-500 ls-minus-2px mb-0">Tentang Kampus</h1>
                 </div>
                 <div class="col-xxl-5 col-lg-6 col-md-10 last-paragraph-no-margin">
-                    <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100">{{ $tentangKampusItems->deskripsi }}</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- end page title -->
+
+    <section class="background-position-center background-repeat"
+    style="background-image: url('images/vertical-center-line-bg.svg')">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-11 info-box">
+                <h2>Sejarah IWU</h2>
+                <div class="row align-items-center">
+                    <!-- Kolom Kiri: Konten -->
+                    <div class="col-md-8">
+                        @if ($tentangKampusItems)
+                            <p>{!! $tentangKampusItems->deskripsi_sejarah !!}</p>
+                        @else
+                            <p>No speech available.</p>
+                        @endif
+                    </div>
+
+                    <!-- Kolom Kanan: Gambar & Nama -->
+                    <div class="col-md-4 text-center">
+                        @if ($tentangKampusItems)
+                            <div class="info-image">
+                                <img src="{{ Storage::url($tentangKampusItems->gambar_sejarah) }}" alt="Pimpinan">
+                            </div>
+                        @else
+                            <p>No image available.</p>
+                        @endif
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
     <!-- start section -->
-    <section id="visi-misi" class="background-position-center background-repeat overlap-height pb-5"
+    <div id="visi-misi" class="background-position-center background-repeat overlap-height pb-5"
         style="background-image: url('images/vertical-center-line-bg.svg')">
         <div class="container overlap-gap-section">
             <div class="row">
@@ -238,11 +252,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <!-- end section -->
-
-
-
 
     <!-- start section -->
     <section id="pimpinan" class="bg-very-light-gray background-position-center background-repeat position-relative"

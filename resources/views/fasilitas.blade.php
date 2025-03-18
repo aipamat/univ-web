@@ -2,17 +2,15 @@
 <html class="no-js" lang="en">
 
 <head>
-    <title>International Women University | Fakultas</title>
+    <title>International Women University | Fasilitas</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="ThemeZaa">
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta name="description"
-        content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 52+ ready demos.">
     <!-- favicon icon -->
     <link rel="shortcut icon" href="{{ asset('images/IWU/logo.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/IWU/logo.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/IWU/logo.png') }}">
+
     <!-- google fonts preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,14 +142,14 @@
                                 <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    @foreach($fakultasItems as $fakultasLink)
-                                        <li>
-                                            <a href="/fakultas/{{$fakultasLink->id}}">
-                                                <div class="submenu-icon-content">
-                                                    <span>{{$fakultasLink->nama_fakultas}}</span>
-                                                </div>
-                                            </a>
-                                        </li>
+                                  @foreach($fakultasItems as $fakultasLink)
+                                    <li>
+                                        <a href="/fakultas/{{$fakultasLink->id}}">
+                                            <div class="submenu-icon-content">
+                                                <span>{{$fakultasLink->nama_fakultas}}</span>
+                                            </div>
+                                        </a>
+                                    </li>
                                     @endforeach
                                 </ul>
                             </li>
@@ -159,11 +157,11 @@
                         <ul class="navbar-nav navbar-right justify-content-start">
                         <li class="nav-item"><a href="fasilitas"
                         class="nav-link">Fasilitas</a></li>
-                            <li class="nav-item"><a href="beasiswa" class="nav-link"
-                                    onclick="return false">Beasiswa</a>
+                            <li class="nav-item"><a href="beasiswa" onclick="return false"
+                                    class="nav-link">Beasiswa</a>
                             </li>
-                            <li class="nav-item"><a href="testimoni" class="nav-link"
-                                    onclick="return false">Testimoni</a>
+                            <li class="nav-item"><a href="testimoni" onclick="return false"
+                                    class="nav-link">Testimoni</a>
                             </li>
                         </ul>
                     </div>
@@ -177,127 +175,52 @@
         </nav>
     </header>
     <!-- end header -->
-    <!-- start page title -->
     <section
         class="page-title-separate-breadcrumbs cover-background border-top border-4 border-color-base-color top-space-margin"
-        style="background-image: url('{{Storage::url($fakultasUtamaItems->banner_utama)}}')">
+        style="background-image: url('{{Storage::url($fasilitasUtama->banner_utama)}}')">
         <div class="opacity-full bg-gradient-dark-transparent"></div>
         <div class="container position-relative">
             <div class="row align-items-start align-items-lg-end justify-content-end flex-column flex-lg-row extra-small-screen"
                 data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                <div class="col-xxl-7 col-lg-6 col-md-10 position-relative page-title-large md-mb-15px xs-mb-5px">
-                    <h1 class="text-white alt-font fw-500 ls-minus-2px mb-0">Daftar Fakultas</h1>
+                <div class="col-xxl-7 col-lg-6 col-md-10 position-relative page-title-large md-mb-10px xs-mb-5px">
+                    <h1 class="text-white alt-font fw-500 ls-minus-2px mb-0">Fasilitas</h1>
                 </div>
                 <div class="col-xxl-5 col-lg-6 col-md-10 last-paragraph-no-margin">
                 </div>
-
             </div>
         </div>
     </section>
-    <!-- end page title -->
     <!-- start section -->
-    <section class="background-position-center background-repeat"
-        style="background-image: url('images/vertical-center-line-bg.svg')">
-        <div class="container">
-            <div id="fakultas-fst" class="row g-0 justify-content-center border-radius-6px overflow-hidden mb-8" id="fp"
-                data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <div class="col-lg-7 md-h-400px sm-h-300px text-center">
-                    <div class="swiper h-100 swiper-pagination-style-3"
-                        data-slider-options='{ "slidesPerView": 1, "spaceBetween": 10, "loop": true, "pagination": { "el": ".slider-four-slide-pagination", "clickable": true }, "autoplay": { "delay": 3000, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1400": { "slidesPerView": 1 }, "1200": { "slidesPerView": 1 }, "992": { "slidesPerView": 1 }, "768": { "slidesPerView": 1 } }, "effect": "slide" }'>
-                        <div class="swiper-wrapper">
-                            <!-- start carousal item -->
-                            <div class="swiper-slide cover-background"
-                                style="background-image: url('{{Storage::url($fakultasUtamaFST->display)}}')"></div>
-                            <!-- end carousal item -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 bg-very-light-gray">
-                    <div class="pt-13 pb-12 ps-15 pe-15 lg-p-8 last-paragraph-no-margin">
-                        <a href="{{ route('fakultas.detail', ['id' => $fakultasUtamaFST->id]) }}">
-                            <h4 class="alt-font text-dark-gray mb-20px ls-minus-1px d-inline-block">{{$fakultasUtamaFST->nama_fakultas}}
-                            </h4>
-                        </a>
-                        <p class="fs-17">{{$fakultasUtamaFST->deskripsi}}
-                        </p>
-                    </div>
-                    <div
-                        class="ps-15 pe-15 pt-5 pb-5 lg-ps-8 lg-pe-8 border-top border-color-transparent-dark-very-light align-items-center d-flex justify-content-center">
-                        <a href="{{ route('fakultas.detail', ['id' => $fakultasUtamaFST->id]) }}"
-                            class="btn btn-medium btn-switch-text btn-base-color btn-box-shadow btn-round-edge d-inline-block align-middle xs-ms-auto">
-                            <span>
-                                <span class="btn-double-text" data-text="Lihat Selengkapnya">Lihat Selengkapnya</span>
-                            </span>
-                        </a>
-                    </div>
+    <!-- start section -->
+    <section class="bg-very-light-gray overlap-height position-relative background-position-center background-repeat"
+        style="background-image: url('images/vertical-center-line-bg-dark.svg')">
+        <div class="container overlap-gap-section">
+            <!-- Judul Bagian -->
+            <div class="row justify-content-center mb-5 xs-mb-7">
+                <div class="col-md-8 text-center"
+                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <h2 class="alt-font mb-5px text-dark-gray ls-minus-2px">IWU CAMPUS TOUR</h2>
+                    <p class="mb-0">Jelajahi kampus dengan fasilitas unggulan</p>
                 </div>
             </div>
-            <div id="fakultas-fisb" class="row g-0 justify-content-center border-radius-6px overflow-hidden flex-row-reverse mb-8"
-                id="fisb"
-                data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <div class="col-lg-7 md-h-400px sm-h-300px text-center">
-                    <div class="swiper h-100 swiper-pagination-style-3"
-                        data-slider-options='{ "slidesPerView": 1, "spaceBetween": 10, "loop": true, "pagination": { "el": ".slider-four-slide-pagination", "clickable": true }, "autoplay": { "delay": 3000, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1400": { "slidesPerView": 1 }, "1200": { "slidesPerView": 1 }, "992": { "slidesPerView": 1 }, "768": { "slidesPerView": 1 } }, "effect": "slide" }'>
-                        <div class="swiper-wrapper">
-                            <!-- start carousal item -->
-                            <div class="swiper-slide cover-background"
-                                style="background-image: url('{{Storage::url($fakultasUtamaFISB->display)}}')"></div>
-                            <!-- end carousal item -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 bg-very-light-gray">
-                    <div class="pt-13 pb-12 ps-15 pe-15 lg-p-8 last-paragraph-no-margin">
-                        <a href="{{ route('fakultas.detail', ['id' => $fakultasUtamaFISB->id]) }}">
-                            <h4 class="alt-font text-dark-gray mb-20px ls-minus-1px d-inline-block">{{$fakultasUtamaFISB->nama_fakultas}}</h4>
-                        </a>
-                        <p class="fs-17">{{$fakultasUtamaFISB->deskripsi}}</p>
-                    </div>
-                    <div
-                        class="ps-15 pe-15 pt-5 pb-5 lg-ps-8 lg-pe-8 border-top border-color-transparent-dark-very-light align-items-center d-flex justify-content-center">
-                        <a href="{{ route('fakultas.detail', ['id' => $fakultasUtamaFISB->id]) }}"
-                            class="btn btn-medium btn-switch-text btn-base-color btn-box-shadow btn-round-edge d-inline-block align-middle xs-ms-auto">
-                            <span>
-                                <span class="btn-double-text" data-text="Lihat Selengkapnya">Lihat Selengkapnya</span>
-                            </span>
-                        </a>
-                    </div>
-                </div>
 
-            </div>
-            <div id="fakultas-pasca" class="row g-0 justify-content-center border-radius-6px overflow-hidden mb-8" id="fp"
-                data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <div class="col-lg-7 md-h-400px sm-h-300px text-center">
-                    <div class="swiper h-100 swiper-pagination-style-3"
-                        data-slider-options='{ "slidesPerView": 1, "spaceBetween": 10, "loop": true, "pagination": { "el": ".slider-four-slide-pagination", "clickable": true }, "autoplay": { "delay": 3000, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1400": { "slidesPerView": 1 }, "1200": { "slidesPerView": 1 }, "992": { "slidesPerView": 1 }, "768": { "slidesPerView": 1 } }, "effect": "slide" }'>
-                        <div class="swiper-wrapper">
-                            <!-- start carousal item -->
-                            <div class="swiper-slide cover-background"
-                                style="background-image: url('{{Storage::url($fakultasUtamaPasca->display)}}')"></div>
-                            <!-- end carousal item -->
+            <!-- Konten 5 Kolom -->
+            <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center text-center"
+                data-anime='{ "el": "childs", "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                @foreach($kampuses as $kampus)
+                    <div class="col d-flex align-items-stretch mb-4">
+                        <a href="{{ route('fasilitas.detail', $kampus->id) }}" class="card-link">
+                            <div class="card border-0 shadow h-100">
+                                <img src="{{ Storage::url($kampus->gambar_kampus) }}" class="card-img-top" alt="{{ $kampus->nama_kampus }}">
+                                <div class="card-body">
+                                    <h5 class="card-title alt-font text-dark-gray">{{ $kampus->nama_kampus }}</h5>
+                                </div>
                             </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 bg-very-light-gray">
-                    <div class="pt-13 pb-12 ps-15 pe-15 lg-p-8 last-paragraph-no-margin">
-                        <a href="{{ route('fakultas.detail', ['id' => $fakultasUtamaPasca->id]) }}">
-                            <h4 class="alt-font text-dark-gray mb-20px ls-minus-1px d-inline-block">{{$fakultasUtamaPasca->nama_fakultas}}
-                            </h4>
-                        </a>
-                        <p class="fs-17">{{$fakultasUtamaPasca->deskripsi}}
-                        </p>
-                    </div>
-                    <div
-                        class="ps-15 pe-15 pt-5 pb-5 lg-ps-8 lg-pe-8 border-top border-color-transparent-dark-very-light align-items-center d-flex justify-content-center">
-                        <a href="{{ route('fakultas.detail', ['id' => $fakultasUtamaPasca->id]) }}"
-                            class="btn btn-medium btn-switch-text btn-base-color btn-box-shadow btn-round-edge d-inline-block align-middle xs-ms-auto">
-                            <span>
-                                <span class="btn-double-text" data-text="Lihat Selengkapnya">Lihat Selengkapnya</span>
-                            </span>
                         </a>
                     </div>
-                </div>
+                @endforeach
             </div>
+        </div>
     </section>
     <!-- end section -->
 
@@ -356,6 +279,7 @@
         </div>
     </footer>
     <!-- end footer -->
+
     <!-- start scroll progress -->
     <div class="scroll-progress d-none d-xxl-block">
         <a href="#" class="scroll-top" aria-label="scroll">

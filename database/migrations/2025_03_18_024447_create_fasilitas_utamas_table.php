@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tentang_kampuses', function (Blueprint $table) {
+        Schema::create('fasilitas_utamas', function (Blueprint $table) {
             $table->id();
-            $table->string('banner');
-            $table->string('gambar_sejarah');
-            $table->text('deskripsi_sejarah')->nullable();
+            $table->string('banner_utama');
             $table->timestamps();
         });
     }
@@ -25,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tentang_kampuses');
+        Schema::dropIfExists('fasilitas_utamas');
     }
 };

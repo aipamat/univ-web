@@ -142,34 +142,15 @@
                                 <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  @foreach($fakultasItems as $fakultasLink)
                                     <li>
-                                        <a href="fakultas#fakultas-fst">
+                                        <a href="/fakultas/{{$fakultasLink->id}}">
                                             <div class="submenu-icon-content">
-                                                <span>Fakultas Sains dan Teknologi</span>
+                                                <span>{{$fakultasLink->nama_fakultas}}</span>
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="fakultas#fakultas-fisb">
-                                            <div class="submenu-icon-content">
-                                                <span>Fakultas Ilmu Sosial dan Bisnis</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- <li>
-                                        <a href="fakultas-vokasi">
-                                            <div class="submenu-icon-content">
-                                                <span>Fakultas Vokasi</span>
-                                            </div>
-                                        </a>
-                                    </li> -->
-                                    <li>
-                                        <a href="fakultas#fakultas-pasca">
-                                            <div class="submenu-icon-content">
-                                                <span>Fakultas Pascasarjana</span>
-                                            </div>
-                                        </a>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </li>
                         </ul>
@@ -220,14 +201,6 @@
                                 <span><i class="fa-solid fa-arrow-right fs-14"></i></span>
                             </span>
                         </a>
-                    </div>
-                    <div
-                        class="position-absolute sm-position-relative bottom-20px lg-bottom-50px sm-bottom-0px left-0px right-0px d-flex justify-content-center align-items-center">
-                        <div class="fs-22 fw-500">Temukan kesempatan untuk tumbuh, belajar, dan <div
-                                class="highlight-separator" data-shadow-animation="true" data-animation-delay="500">
-                                berinovasi bersama kami.<span><img src="images/highlight-separator.svg" alt=""></span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -376,12 +349,53 @@
     </section>
     <!-- end section -->
 
+    <section class="bg-very-light-gray background-position-center background-repeat"
+    style="background-image: url('images/vertical-center-line-bg.svg')">
+        <div class="container" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <div class="row justify-content-center">
+                <div class="col-md-10 info-box">
+                    <h2>Kata Sambutan</h2>
+                    <div class="row align-items-center">
+                        <!-- Kolom Kiri: Konten -->
+                        <div class="col-md-8">
+                            @if ($pimpinanSpeech)
+                                <p>{!! $pimpinanSpeech->kata_sambutan !!}</p>
+                            @else
+                                <p>No speech available.</p>
+                            @endif
+                        </div>
+
+                        <!-- Kolom Kanan: Gambar & Nama -->
+                        <div class="col-md-4 text-center">
+                            @if ($pimpinanSpeech)
+                                <div class="info-image">
+                                    <img src="{{ Storage::url($pimpinanSpeech->foto) }}" alt="Pimpinan">
+                                </div>
+                                <div class="info-content">
+                                    <p>{{ $pimpinanSpeech->nama }}</p>
+                                </div>
+                            @endif
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- start section -->
     <section class="background-position-center background-repeat overlap-height position-relative"
         style="background-image: url('images/vertical-center-line-bg.svg')">
         <div class="container"
             data-anime='{ "el": "childs", "perspective": [800, 1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
             <!-- start instagram -->
+            <div class="row justify-content-center mb-5 xs-mb-7">
+                <div class="col-md-8 text-center"
+                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <h2 class="alt-font mb-5px text-dark-gray ls-minus-2px">Berita IWU</h2>
+                </div>
+            </div>
             <div
                 class="row row-cols-3 row-cols-lg-5 row-cols-sm-3 align-items-center justify-content-center mb-4 md-mb-50px xs-mb-40px instagram-follow-api position-relative">
                 <div class="col instafeed-grid md-mb-30px xs-mb-15px">
@@ -408,15 +422,6 @@
                     <figure class="border-radius-0px"><a href="https://www.instagram.com/iwuidn/" target="_blank"><img
                                 src="images/IWU/logo-600x600.png" class="insta-image" alt=""><span class="insta-icon"><i
                                     class="fa-brands fa-instagram"></i></span></a></figure>
-                </div>
-                <div class="absolute-middle-center z-index-1 w-auto">
-                    <a href="https://www.instagram.com/iwuidn/" target="_blank"
-                        class="btn btn-large btn-switch-text btn-white btn-rounded left-icon btn-box-shadow instagram-button">
-                        <span>
-                            <span><i class="fa-brands fa-instagram text-base-color"></i></span>
-                            <span class="btn-double-text" data-text="Follow iwuidn">Follow iwuidn</span>
-                        </span>
-                    </a>
                 </div>
             </div>
             <!-- end instagram -->
@@ -486,7 +491,6 @@
             </div>
         </div>
     </section> -->
-    <!-- end section -->
 
     <!-- start footer -->
     <section

@@ -11,6 +11,7 @@ class FakultasController extends Controller
 {
     public function index(){
         // Fakultas Utama
+        $fakultasItems = Fakultas::all();
         $fakultasUtamaItems = DisplayFakultas::first();
         $fakultasUtamaFST = Fakultas::where('nama_fakultas', 'Fakultas Sains dan Teknologi')
         ->first();
@@ -23,14 +24,15 @@ class FakultasController extends Controller
         $fakultasUtamaSD = Fakultas::where('nama_fakultas', 'Fakultas Seni dan Desain')
         ->first();
 
-        return view('fakultas/fakultas', compact('fakultasUtamaItems', 'fakultasUtamaFST', 'fakultasUtamaFISB', 'fakultasUtamaPasca', 'fakultasUtamaVokasi', 'fakultasUtamaSD'));
+        return view('fakultas/fakultas', compact('fakultasItems', 'fakultasUtamaItems', 'fakultasUtamaFST', 'fakultasUtamaFISB', 'fakultasUtamaPasca', 'fakultasUtamaVokasi', 'fakultasUtamaSD'));
     }
 
     public function show($id)
 {
+    $fakultasItems = Fakultas::all();
     $fakultas = Fakultas::with(['dekan', 'programStudi', 'daftarKaprodi'])->findOrFail($id);
     
-    return view('fakultas.detail-fakultas', compact('fakultas'));
+    return view('fakultas.detail-fakultas', compact('fakultasItems', 'fakultas'));
 }
 
 

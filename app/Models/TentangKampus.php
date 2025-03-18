@@ -11,7 +11,6 @@ class TentangKampus extends Model
     protected $table = 'tentang_kampuses';
     protected $fillable = [
         'banner',
-        'deskripsi',
         'gambar_sejarah',
         'deskripsi_sejarah'
     ];

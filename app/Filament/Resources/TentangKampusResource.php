@@ -39,15 +39,6 @@ class TentangKampusResource extends Resource
                 ->columnSpan(2)
                 ->required(),
 
-                TextArea::make('deskripsi')
-                ->label('Deskripsi')
-                ->placeholder('Cth: Kampus kami menawarkan pendidikan berkualitas dengan fasilitas terbaik, untuk membantu Anda mencapai tujuan akademik dan profesional.')
-                ->helperText('Maks. 150 Karakter.')
-                ->columnSpan(2)
-                ->minLength(5)
-                ->maxLength(150)
-                ->required(),
-
                 FileUpload::make('gambar_sejarah')
                 ->label('Gambar Sejarah Kampus')
                 ->helperText('Harus ukuran (800x800).')
@@ -79,10 +70,6 @@ class TentangKampusResource extends Resource
                 ->label('Banner'),
                 ImageColumn::make('gambar_sejarah')
                 ->label('Gambar Sejarah Kampus'),
-                TextColumn::make('deskripsi')
-                ->label('Deskripsi')
-                ->limit(50)
-                ->wrap(),
                 TextColumn::make('deskripsi_sejarah')
                 ->label('Deskripsi Sejarah')
                 ->wrap()

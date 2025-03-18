@@ -8,9 +8,9 @@
 /* variable */
 :root {
     --base-color: #991373;
-    --medium-gray: #ca0795;
+    --medium-gray: #000000;
     --very-light-gray: #F5F5F5;
-    --bg-footer: #a61182;
+    --bg-footer: #F5F5F5;
     --alt-font: 'Rufina', serif;
     --primary-font: 'Urbanist', sans-serif;
 }
@@ -223,6 +223,41 @@ header .navbar-brand img {
     transform: scale(1.1) translateY(-10px);
     /* Scale up and move image upwards */
 }
+
+.info-box {
+    background-color: #a61182;
+    /* Warna background */
+    color: white;
+    /* Warna teks tetap putih */
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.info-box h2 {
+    color: white;
+    /* Warna judul tetap putih */
+    font-weight: bold;
+    text-align: center;
+}
+
+.info-image img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.info-content {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.info-content p {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+
 
 /* footer */
 footer .nav-link {

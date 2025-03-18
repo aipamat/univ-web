@@ -90,7 +90,7 @@
                                 href="tel:0226019845">(022) 6019845</a></div>
                     </div>
                     <a class="navbar-brand" href="/">
-                        <img src="images/IWU/logo.png" alt="">
+                        <img src="../images/IWU/logo.png" alt="">
                     </a>
                 </div>
                 <div class="col-auto col-xl-8 col-lg-10 menu-order">
@@ -117,21 +117,21 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="tentang-kampus#pimpinan">
+                                        <a href="../tentang-kampus#pimpinan">
                                             <div class="submenu-icon-content">
                                                 <span>Pimpinan</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="tentang-kampus#struktur-organisasi">
+                                        <a href="../tentang-kampus#struktur-organisasi">
                                             <div class="submenu-icon-content">
                                                 <span>Struktur Organisasi</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="tentang-kampus#kerja-sama">
+                                        <a href="../tentang-kampus#kerja-sama">
                                             <div class="submenu-icon-content">
                                                 <span>Kerja Sama</span>
                                             </div>
@@ -139,49 +139,30 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown dropdown-with-icon"><a href="fakultas"
+                            <li class="nav-item dropdown dropdown-with-icon"><a href="../fakultas"
                                     class="nav-link">Fakultas</a>
                                 <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li>
-                                        <a href="../fakultas#fakultas-fst">
-                                            <div class="submenu-icon-content">
-                                                <span>Fakultas Sains dan Teknologi</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="../fakultas#fakultas-fisb">
-                                            <div class="submenu-icon-content">
-                                                <span>Fakultas Ilmu Sosial dan Bisnis</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- <li>
-                                        <a href="fakultas-vokasi">
-                                            <div class="submenu-icon-content">
-                                                <span>Fakultas Vokasi</span>
-                                            </div>
-                                        </a>
-                                    </li> -->
-                                    <li>
-                                        <a href="../fakultas#fakultas-pasca">
-                                            <div class="submenu-icon-content">
-                                                <span>Fakultas Pascasarjana</span>
-                                            </div>
-                                        </a>
-                                    </li>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    @foreach($fakultasItems as $fakultasLink)
+                                        <li>
+                                            <a href="/fakultas/{{$fakultasLink->id}}">
+                                                <div class="submenu-icon-content">
+                                                    <span>{{$fakultasLink->nama_fakultas}}</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </li>
                         </ul>
                         <ul class="navbar-nav navbar-right justify-content-start">
-                        <li class="nav-item"><a href="fasilitas"
+                        <li class="nav-item"><a href="../fasilitas"
                         class="nav-link">Fasilitas</a></li>
-                            <li class="nav-item"><a href="beasiswa" class="nav-link"
+                            <li class="nav-item"><a href="../beasiswa" class="nav-link"
                                     onclick="return false">Beasiswa</a>
                             </li>
-                            <li class="nav-item"><a href="testimoni" class="nav-link"
+                            <li class="nav-item"><a href="../testimoni" class="nav-link"
                                     onclick="return false">Testimoni</a>
                             </li>
                         </ul>
@@ -198,13 +179,17 @@
     <!-- end header -->
     <!-- start page title -->
 <section
-    class="page-title-separate-breadcrumbs cover-background border-top border-4 border-color-base-color top-space-margin magic-cursor round-cursor"
+    class="page-title-separate-breadcrumbs cover-background border-top border-4 border-color-base-color top-space-margin"
     style="background-image: url('{{Storage::url($fakultas->banner)}}')">
     <div class="opacity-full bg-gradient-dark-transparent"></div>
     <div class="container position-relative">
         <div class="row align-items-start align-items-lg-end justify-content-end flex-column flex-lg-row extra-small-screen">
             <div class="col-xxl-7 col-lg-6 col-md-10 position-relative page-title-large md-mb-10px xs-mb-5px">
                 <h1 class="text-white alt-font fw-500 ls-minus-2px mb-0">{{ $fakultas->nama_fakultas }}</h1>
+            </div>
+            <div class="col-xxl-5 col-lg-6 col-md-10 last-paragraph-no-margin">
+                <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100">
+                </p>
             </div>
         </div>
     </div>
