@@ -51,9 +51,9 @@ class FasilitasResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('gambar')
-                ->label('Gambar Mitra'),
+                ->label('Gambar Fasilitas'),
                 TextColumn::make('nama')
-                ->label('Nama Mitra')
+                ->label('Nama Fasilitas')
                 ->wrap()
             ])
             ->filters([

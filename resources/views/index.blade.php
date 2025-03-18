@@ -351,36 +351,34 @@
 
     <section class="bg-very-light-gray background-position-center background-repeat"
     style="background-image: url('images/vertical-center-line-bg.svg')">
-        <div class="container" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            <div class="row justify-content-center">
-                <div class="col-md-10 info-box">
-                    <h2>Kata Sambutan</h2>
-                    <div class="row align-items-center">
-                        <!-- Kolom Kiri: Konten -->
-                        <div class="col-md-8">
-                            @if ($pimpinanSpeech)
-                                <p>{!! $pimpinanSpeech->kata_sambutan !!}</p>
-                            @else
-                                <p>No speech available.</p>
-                            @endif
-                        </div>
+    <div class="container" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+        <div class="row justify-content-center">
+            <div class="col-md-10 info-box">
+                <h2 class="mb-4">Kata Sambutan</h2>
+                
+                @if ($pimpinanSpeech)
+                    <!-- Gambar di atas -->
+                    <div class="info-image mb-3 text-center">
+                        <img src="{{ Storage::url($pimpinanSpeech->foto) }}" alt="Pimpinan" class="img-fluid" style="max-width: 150px;">
+                    </div>
+                    
+                    <!-- Nama Pimpinan -->
+                    <div class="info-content">
+                        <p class="fw-bold">{{ $pimpinanSpeech->nama }}</p>
+                    </div>
 
-                        <!-- Kolom Kanan: Gambar & Nama -->
-                        <div class="col-md-4 text-center">
-                            @if ($pimpinanSpeech)
-                                <div class="info-image">
-                                    <img src="{{ Storage::url($pimpinanSpeech->foto) }}" alt="Pimpinan">
-                                </div>
-                                <div class="info-content">
-                                    <p>{{ $pimpinanSpeech->nama }}</p>
-                                </div>
-                            @endif
-                        </div>
-                    </div>  
-                </div>
+                    <!-- Kata Sambutan -->
+                    <div>
+                        <p>{!! $pimpinanSpeech->kata_sambutan !!}</p>
+                    </div>
+                @else
+                    <p>No speech available.</p>
+                @endif
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
 
 

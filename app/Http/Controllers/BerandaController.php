@@ -21,5 +21,6 @@ class BerandaController extends Controller
         $kerjasamaItems = KerjaSama::all();
         return view('index', compact('beranda', 'pimpinanSpeech', 'teksIklans', 'fakultasItems', 'kerjasamaItems'));
     }
+    
 }
 

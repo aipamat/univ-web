@@ -23,6 +23,7 @@ Route::get('/', function () {
 
 Route::get('/', [BerandaController::class, 'index']);
 
+
 Route::get('/tentang-kampus', function () {
     return view('tentang-kampus');
 });

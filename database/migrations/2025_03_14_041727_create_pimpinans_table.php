@@ -27,7 +27,7 @@ return new class extends Migration
                   ->onUpdate('cascade')
                   ->nullable();
             $table->string('bidang')->nullable();
-            $table->string('kata_sambutan')->nullable();
+            $table->text('kata_sambutan')->nullable();
             $table->timestamps();
         });
     }

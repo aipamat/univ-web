@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('gambar_kampus');
             $table->string('nama_kampus');
             $table->string('alamat');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }

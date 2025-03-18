@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('pimpinans', function (Blueprint $table) {
-            $table->enum('program_studi', ['Rektor', 'Wakil Rektor', 'Dekan', 'Kepala Prodi'])->nullable()->after('status');
+        Schema::create('beasiswas', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_beasiswa');
+            $table->text('deskripsi');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('pimpinans', function (Blueprint $table) {
-            $table->dropColumn('program_studi');
-        });
+        Schema::dropIfExists('beasiswas');
     }
 };
