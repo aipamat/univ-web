@@ -394,33 +394,26 @@
                     <h2 class="alt-font mb-5px text-dark-gray ls-minus-2px">Berita IWU</h2>
                 </div>
             </div>
-            <div
-                class="row row-cols-3 row-cols-lg-5 row-cols-sm-3 align-items-center justify-content-center mb-4 md-mb-50px xs-mb-40px instagram-follow-api position-relative">
-                <div class="col instafeed-grid md-mb-30px xs-mb-15px">
-                    <figure class="border-radius-0px"><a href="https://www.instagram.com/iwuidn/" target="_blank"><img
-                                src="images/IWU/logo-600x600.png" class="insta-image" alt=""><span class="insta-icon"><i
-                                    class="fa-brands fa-instagram"></i></span></a></figure>
-                </div>
-                <div class="col instafeed-grid md-mb-30px xs-mb-15px">
-                    <figure class="border-radius-0px"><a href="https://www.instagram.com/iwuidn/" target="_blank"><img
-                                src="images/IWU/logo-600x600.png" class="insta-image" alt=""><span class="insta-icon"><i
-                                    class="fa-brands fa-instagram"></i></span></a></figure>
-                </div>
-                <div class="col instafeed-grid md-mb-30px xs-mb-15px">
-                    <figure class="border-radius-0px"><a href="https://www.instagram.com/iwuidn/" target="_blank"><img
-                                src="images/IWU/logo-600x600.png" class="insta-image" alt=""><span class="insta-icon"><i
-                                    class="fa-brands fa-instagram"></i></span></a></figure>
-                </div>
-                <div class="col instafeed-grid">
-                    <figure class="border-radius-0px"><a href="https://www.instagram.com/iwuidn/" target="_blank"><img
-                                src="images/IWU/logo-600x600.png" class="insta-image" alt=""><span class="insta-icon"><i
-                                    class="fa-brands fa-instagram"></i></span></a></figure>
-                </div>
-                <div class="col instafeed-grid">
-                    <figure class="border-radius-0px"><a href="https://www.instagram.com/iwuidn/" target="_blank"><img
-                                src="images/IWU/logo-600x600.png" class="insta-image" alt=""><span class="insta-icon"><i
-                                    class="fa-brands fa-instagram"></i></span></a></figure>
-                </div>
+            <div class="row row-cols-3 row-cols-lg-5 row-cols-sm-3 align-items-center justify-content-center mb-1 md-mb-50px xs-mb-40px instagram-follow-api position-relative">
+                @foreach($sortedInstagramPosts as $post)
+                    <div class="col instafeed-grid md-mb-30px xs-mb-15px mb-3">
+                        <figure class="border-radius-0px">
+                            <a href="{{ $post['permalink'] }}" target="_blank">
+                                <img src="{{ $post['media_type'] === 'VIDEO' ? $post['thumbnail_url'] : $post['media_url'] }}" 
+                                    class="insta-image" 
+                                    alt="{{ $post['caption'] ?? 'Instagram Image' }}">
+                                <span class="insta-icon"><i class="fa-brands fa-instagram"></i></span>
+                            </a>
+                        </figure>
+                    </div>
+                @endforeach
+            </div>
+
+            <!-- Tombol Berita Selengkapnya -->
+            <div class="text-center">
+                <a href="https://www.instagram.com/iwuidn/" target="_blank" class="btn px-4 py-2">
+                    Baca Berita Lainnya
+                </a>
             </div>
             <!-- end instagram -->
         </div>
