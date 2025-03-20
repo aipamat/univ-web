@@ -21,6 +21,8 @@ class BeasiswaResource extends Resource
 {
     protected static ?string $model = Beasiswa::class;
 
+    protected static ?string $navigationGroup = 'Beasiswa';
+    protected static ?string $navigationLabel = 'Beasiswa';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
@@ -33,7 +35,6 @@ class BeasiswaResource extends Resource
                 ->minLength(5)
                 ->maxLength(50)
                 ->columnSpan(2)
-                ->unique()
                 ->required(),
                 TiptapEditor::make('deskripsi')
                 ->label('Deskripsi')

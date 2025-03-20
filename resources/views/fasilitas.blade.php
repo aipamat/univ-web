@@ -157,10 +157,10 @@
                         <ul class="navbar-nav navbar-right justify-content-start">
                         <li class="nav-item"><a href="fasilitas"
                         class="nav-link">Fasilitas</a></li>
-                            <li class="nav-item"><a href="beasiswa" onclick="return false"
+                            <li class="nav-item"><a href="beasiswa"
                                     class="nav-link">Beasiswa</a>
                             </li>
-                            <li class="nav-item"><a href="testimoni" onclick="return false"
+                            <li class="nav-item"><a href="testimoni"
                                     class="nav-link">Testimoni</a>
                             </li>
                         </ul>
@@ -209,7 +209,7 @@
                 data-anime='{ "el": "childs", "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 @foreach($kampuses as $kampus)
                     <div class="col d-flex align-items-stretch mb-4">
-                        <a href="{{ route('fasilitas.detail', $kampus->id) }}" class="card-link">
+                        <a href="{{ route('fasilitas.detail', $kampus->id) }}" target="_blank" class="card-link">
                             <div class="card border-0 shadow h-100">
                                 <img src="{{ Storage::url($kampus->gambar_kampus) }}" class="card-img-top" alt="{{ $kampus->nama_kampus }}">
                                 <div class="card-body">

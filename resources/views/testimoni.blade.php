@@ -2,17 +2,15 @@
 <html class="no-js" lang="en">
 
 <head>
-    <title>International Women University | Fakultas Sains dan Teknologi</title>
+    <title>International Women University | Fasilitas</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="ThemeZaa">
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta name="description"
-        content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 52+ ready demos.">
     <!-- favicon icon -->
     <link rel="shortcut icon" href="{{ asset('images/IWU/logo.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/IWU/logo.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/IWU/logo.png') }}">
+
     <!-- google fonts preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,7 +88,7 @@
                                 href="tel:0226019845">(022) 6019845</a></div>
                     </div>
                     <a class="navbar-brand" href="/">
-                        <img src="../images/IWU/logo.png" alt="">
+                        <img src="images/IWU/logo.png" alt="">
                     </a>
                 </div>
                 <div class="col-auto col-xl-8 col-lg-10 menu-order">
@@ -103,35 +101,35 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                         <ul class="navbar-nav navbar-left justify-content-end">
-                            <li class="nav-item"><a href="../" class="nav-link">Beranda</a></li>
-                            <li class="nav-item dropdown dropdown-with-icon"><a href="../tentang-kampus"
+                            <li class="nav-item"><a href="/" class="nav-link">Beranda</a></li>
+                            <li class="nav-item dropdown dropdown-with-icon"><a href="tentang-kampus"
                                     class="nav-link">Tentang</a>
                                 <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li>
-                                        <a href="../tentang-kampus#visi-misi">
+                                        <a href="tentang-kampus#visi-misi">
                                             <div class="submenu-icon-content">
                                                 <span>Visi Misi</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../tentang-kampus#pimpinan">
+                                        <a href="tentang-kampus#pimpinan">
                                             <div class="submenu-icon-content">
                                                 <span>Pimpinan</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../tentang-kampus#struktur-organisasi">
+                                        <a href="tentang-kampus#struktur-organisasi">
                                             <div class="submenu-icon-content">
                                                 <span>Struktur Organisasi</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../tentang-kampus#kerja-sama">
+                                        <a href="tentang-kampus#kerja-sama">
                                             <div class="submenu-icon-content">
                                                 <span>Kerja Sama</span>
                                             </div>
@@ -139,27 +137,27 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown dropdown-with-icon"><a href="../fakultas"
+                            <li class="nav-item dropdown dropdown-with-icon"><a href="fakultas"
                                     class="nav-link">Fakultas</a>
                                 <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    @foreach($fakultasItems as $fakultasLink)
-                                        <li>
-                                            <a href="/fakultas/{{$fakultasLink->id}}">
-                                                <div class="submenu-icon-content">
-                                                    <span>{{$fakultasLink->nama_fakultas}}</span>
-                                                </div>
-                                            </a>
-                                        </li>
+                                  @foreach($fakultasItems as $fakultasLink)
+                                    <li>
+                                        <a href="/fakultas/{{$fakultasLink->id}}">
+                                            <div class="submenu-icon-content">
+                                                <span>{{$fakultasLink->nama_fakultas}}</span>
+                                            </div>
+                                        </a>
+                                    </li>
                                     @endforeach
                                 </ul>
                             </li>
                         </ul>
                         <ul class="navbar-nav navbar-right justify-content-start">
-                        <li class="nav-item"><a href="../fasilitas"
+                        <li class="nav-item"><a href="fasilitas"
                         class="nav-link">Fasilitas</a></li>
-                            <li class="nav-item"><a href="../beasiswa"
+                            <li class="nav-item"><a href="beasiswa"
                                     class="nav-link">Beasiswa</a>
                             </li>
                             <li class="nav-item"><a href="testimoni"
@@ -177,68 +175,64 @@
         </nav>
     </header>
     <!-- end header -->
-    <!-- start page title -->
 
-<section
-    class="page-title-separate-breadcrumbs cover-background border-top border-4 border-color-base-color top-space-margin"
-    style="background-image: url('{{Storage::url($kampus->banner_utama)}}')">
-    <div class="opacity-full bg-gradient-dark-transparent"></div>
-    <div class="container position-relative">
-        <div class="row align-items-start align-items-lg-end justify-content-end flex-column flex-lg-row extra-small-screen">
-            <div class="col-xxl-7 col-lg-6 col-md-10 position-relative page-title-large md-mb-10px xs-mb-5px">
-                <h1 class="text-white alt-font fw-500 ls-minus-2px mb-0">{{ $kampus->nama_kampus }}</h1>
-            </div>
-            <div class="col-xxl-5 col-lg-6 col-md-10 last-paragraph-no-margin">
-                <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100">
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end page title -->
-
-<!-- start section -->
-<section class="background-position-center background-repeat position-relative pb-0 overflow-hidden" style="background-image: url('../images/vertical-center-line-bg-dark.svg')">
-    <div class="container" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-        <!-- Konten Foto Dekan dan Teks -->
-        <div class="container my-5">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <img src="{{ Storage::url($kampus->gambar_kampus) }}" 
-                        alt="Gambar Kampus" 
-                        class="img-fluid w-100 mb-3">
-                    <h4 class="text-center">{{ $kampus->nama_kampus ?? 'Belum ada data' }}</h4>
-                    <p>{!! $kampus->deskripsi !!}</p>
+    <section
+        class="page-title-separate-breadcrumbs cover-background border-top border-4 border-color-base-color top-space-margin"
+        style="background-image: url('{{Storage::url($testimoniUtama->banner_utama)}}')">
+        <div class="opacity-full bg-gradient-dark-transparent"></div>
+        <div class="container position-relative">
+            <div class="row align-items-start align-items-lg-end justify-content-end flex-column flex-lg-row extra-small-screen"
+                data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                <div class="col-xxl-7 col-lg-6 col-md-10 position-relative page-title-large md-mb-10px xs-mb-5px">
+                    <h1 class="text-white alt-font fw-500 ls-minus-2px mb-0">Testimoni Alumni</h1>
+                </div>
+                <div class="col-xxl-5 col-lg-6 col-md-10 last-paragraph-no-margin">
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- start section -->
-<section class="bg-very-light-gray background-position-center background-repeat position-relative w-100 min-vh-100" style="background-image: url('../images/vertical-center-line-bg-dark.svg')">
-    <div class="container-fluid p-0" >
-        <div class="row justify-content-center mb-6 xs-mb-9" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            <div class="col-md-8 text-center">
-                <span>Daftar Fasilitas</span>
-                <h2 class="alt-font mb-5px text-dark-gray ls-minus-2px">{{ $kampus->nama_kampus }}</h2>
+    </section>
+    
+    <section class="background-position-center background-repeat overlap-height position-relative"
+    style="background-image: url('images/vertical-center-line-bg.svg')">
+        <div class="container">
+            <div class="row justify-content-center mb-5 xs-mb-7">
+                <div class="col-md-8 text-center"
+                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <h2 class="alt-font mb-5px text-dark-gray ls-minus-2px">Testimoni Alumni</h2>
+                    <span class="d-inline-block">Alumni kami berbagi pengalaman luar biasa selama studi di kampus.</span>
+                </div>
             </div>
-        </div>
 
-        <div class="row justify-content-center mb-5 xs-mb-8" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            @foreach($kampus->fasilitas as $fasilitas)
-                <div class="col-12 col-md-4 mb-30px">
-                    <div class="hover-box md-mb-30px">
-                        <img class="w-50 mx-auto d-block" src="{{ Storage::url($fasilitas->gambar) }}" alt="Gambar Fasilitas">
-                        <div class="p-30px last-paragraph-no-margin text-center">
-                            <span class="d-inline-block fs-22 alt-font">{{ $fasilitas->nama }}</span>
+            <div class="row row-cols-1 row-cols-xl-2 row-cols-lg-2 row-cols-md-1 position-relative justify-content-center mb-4 sm-mb-30px"
+                data-anime='{ "el": "childs", "perspective": [800, 1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+
+                @foreach($testimoniItems as $testimoni)
+                <div class="col review-style-05 md-mb-30px">
+                    <div
+                        class="border-radius-6px bg-white box-shadow-quadruple-large border border-color-extra-medium-gray last-paragraph-no-margin">
+                        <div class="d-flex align-items-center ps-45px pe-45px pt-30px pb-30px lg-p-25px">
+                            <img class="rounded-circle w-120px xs-w-80px me-25px"
+                                src="{{ asset('storage/' . $testimoni->foto) }}" alt="Foto Alumni" />
+                            <p>{!! $testimoni->deskripsi !!}</p>
+                        </div>
+                        <div
+                            class="border-top border-color-extra-medium-gray pt-15px pb-15px ps-45px pe-45px lg-ps-25px lg-pe-25px text-center text-sm-start">
+                            <p class="alt-font fw-500 text-dark-gray xs-fs-17">
+                                {{ $testimoni->nama }},
+                                <span>{{ $testimoni->fakultas->nama_fakultas ?? 'Tidak ada fakultas' }}</span>
+                                <br>
+                                <span>{{ $testimoni->programStudi->nama_prodi ?? 'Tidak ada prodi' }}</span>, Angkatan
+                                <span>{{ $testimoni->angkatan }}</span>
+                            </p>
                         </div>
                     </div>
                 </div>
-            @endforeach
+                @endforeach
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
 
     <!-- start footer -->
     <footer class="pb-50px sm-pt-20px xs-pb-30px bg-footer">
@@ -295,10 +289,11 @@
         </div>
     </footer>
     <!-- end footer -->
+
     <!-- start scroll progress -->
     <div class="scroll-progress d-none d-xxl-block">
         <a href="#" class="scroll-top" aria-label="scroll">
-            <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            <span class="scroll-text">Gulir</span><span class="scroll-line"><span class="scroll-point"></span></span>
         </a>
     </div>
     <!-- end scroll progress -->

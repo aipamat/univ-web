@@ -157,13 +157,11 @@
                             </li>
                         </ul>
                         <ul class="navbar-nav navbar-right justify-content-start">
-                        <li class="nav-item"><a href="../fasilitas"
-                        class="nav-link">Fasilitas</a></li>
-                            <li class="nav-item"><a href="../beasiswa" class="nav-link"
-                                    onclick="return false">Beasiswa</a>
+                            <li class="nav-item"><a href="../fasilitas"
+                            class="nav-link">Fasilitas</a></li>
+                            <li class="nav-item"><a href="../beasiswa" class="nav-link">Beasiswa</a>
                             </li>
-                            <li class="nav-item"><a href="../testimoni" class="nav-link"
-                                    onclick="return false">Testimoni</a>
+                            <li class="nav-item"><a href="../testimoni" class="nav-link">Testimoni</a>
                             </li>
                         </ul>
                     </div>
@@ -197,10 +195,10 @@
 <!-- end page title -->
 
 <!-- start section -->
-<section class="background-position-center background-repeat position-relative pb-0 overflow-hidden">
+<section class="background-position-center background-repeat position-relative pb-0 overflow-hidden" style="background-image: url('../images/vertical-center-line-bg.svg')">
     <div class="container">
         <!-- Konten Foto Dekan dan Teks -->
-        <div class="container my-5">
+        <div class="container my-5" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
             <div class="row justify-content-center">
                 <div class="col-md-4 text-center text-dark-gray">
                     <img src="{{ $fakultas->dekan->foto ? Storage::url($fakultas->dekan->foto) : asset('images/default-profile.png') }}" alt="Foto Dekan" class="img-fluid mb-3">
@@ -212,11 +210,11 @@
                 </div>
             </div>
         </div>
-        <div class="h-2px bg-dark-gray mb-50px"></div>
+        <div class="h-2px bg-dark-gray mb-50px" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'></div>
 
         <!-- Tabel Daftar Link Website Program Studi -->
         <div class="container my-5">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <div class="col-md-8">
                     <table class="table table-bordered text-left">
                         <thead class="bg-purple text-white">
@@ -246,8 +244,8 @@
 <!-- end section -->
 
 <!-- start section -->
-<section class="bg-very-light-gray background-position-center background-repeat position-relative">
-    <div class="container">
+<section class="bg-very-light-gray background-position-center background-repeat position-relative" style="background-image: url('../images/vertical-center-line-bg.svg')">
+    <div class="container" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
         <div class="row justify-content-center mb-6 xs-mb-9">
             <div class="col-md-8 text-center">
                 <span>Ketua Program Studi</span>

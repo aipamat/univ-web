@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
-    <title>International Women University | Fakultas Sains dan Teknologi</title>
+    <title>International Women University | Beasiswa</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="ThemeZaa">
@@ -90,7 +90,7 @@
                                 href="tel:0226019845">(022) 6019845</a></div>
                     </div>
                     <a class="navbar-brand" href="/">
-                        <img src="../images/IWU/logo.png" alt="">
+                        <img src="images/IWU/logo.png" alt="">
                     </a>
                 </div>
                 <div class="col-auto col-xl-8 col-lg-10 menu-order">
@@ -103,35 +103,35 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                         <ul class="navbar-nav navbar-left justify-content-end">
-                            <li class="nav-item"><a href="../" class="nav-link">Beranda</a></li>
-                            <li class="nav-item dropdown dropdown-with-icon"><a href="../tentang-kampus"
+                            <li class="nav-item"><a href="/" class="nav-link">Beranda</a></li>
+                            <li class="nav-item dropdown dropdown-with-icon"><a href="tentang-kampus"
                                     class="nav-link">Tentang</a>
                                 <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li>
-                                        <a href="../tentang-kampus#visi-misi">
+                                        <a href="tentang-kampus#visi-misi">
                                             <div class="submenu-icon-content">
                                                 <span>Visi Misi</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../tentang-kampus#pimpinan">
+                                        <a href="tentang-kampus#pimpinan">
                                             <div class="submenu-icon-content">
                                                 <span>Pimpinan</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../tentang-kampus#struktur-organisasi">
+                                        <a href="tentang-kampus#struktur-organisasi">
                                             <div class="submenu-icon-content">
                                                 <span>Struktur Organisasi</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="../tentang-kampus#kerja-sama">
+                                        <a href="tentang-kampus#kerja-sama">
                                             <div class="submenu-icon-content">
                                                 <span>Kerja Sama</span>
                                             </div>
@@ -139,27 +139,27 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown dropdown-with-icon"><a href="../fakultas"
+                            <li class="nav-item dropdown dropdown-with-icon"><a href="fakultas"
                                     class="nav-link">Fakultas</a>
                                 <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    @foreach($fakultasItems as $fakultasLink)
-                                        <li>
-                                            <a href="/fakultas/{{$fakultasLink->id}}">
-                                                <div class="submenu-icon-content">
-                                                    <span>{{$fakultasLink->nama_fakultas}}</span>
-                                                </div>
-                                            </a>
-                                        </li>
+                                  @foreach($fakultasItems as $fakultasLink)
+                                    <li>
+                                        <a href="/fakultas/{{$fakultasLink->id}}">
+                                            <div class="submenu-icon-content">
+                                                <span>{{$fakultasLink->nama_fakultas}}</span>
+                                            </div>
+                                        </a>
+                                    </li>
                                     @endforeach
                                 </ul>
                             </li>
                         </ul>
                         <ul class="navbar-nav navbar-right justify-content-start">
-                        <li class="nav-item"><a href="../fasilitas"
+                        <li class="nav-item"><a href="fasilitas"
                         class="nav-link">Fasilitas</a></li>
-                            <li class="nav-item"><a href="../beasiswa"
+                            <li class="nav-item"><a href="beasiswa"
                                     class="nav-link">Beasiswa</a>
                             </li>
                             <li class="nav-item"><a href="testimoni"
@@ -178,68 +178,57 @@
     </header>
     <!-- end header -->
     <!-- start page title -->
-
-<section
-    class="page-title-separate-breadcrumbs cover-background border-top border-4 border-color-base-color top-space-margin"
-    style="background-image: url('{{Storage::url($kampus->banner_utama)}}')">
-    <div class="opacity-full bg-gradient-dark-transparent"></div>
-    <div class="container position-relative">
-        <div class="row align-items-start align-items-lg-end justify-content-end flex-column flex-lg-row extra-small-screen">
-            <div class="col-xxl-7 col-lg-6 col-md-10 position-relative page-title-large md-mb-10px xs-mb-5px">
-                <h1 class="text-white alt-font fw-500 ls-minus-2px mb-0">{{ $kampus->nama_kampus }}</h1>
-            </div>
-            <div class="col-xxl-5 col-lg-6 col-md-10 last-paragraph-no-margin">
-                <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100">
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end page title -->
-
-<!-- start section -->
-<section class="background-position-center background-repeat position-relative pb-0 overflow-hidden" style="background-image: url('../images/vertical-center-line-bg-dark.svg')">
-    <div class="container" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-        <!-- Konten Foto Dekan dan Teks -->
-        <div class="container my-5">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <img src="{{ Storage::url($kampus->gambar_kampus) }}" 
-                        alt="Gambar Kampus" 
-                        class="img-fluid w-100 mb-3">
-                    <h4 class="text-center">{{ $kampus->nama_kampus ?? 'Belum ada data' }}</h4>
-                    <p>{!! $kampus->deskripsi !!}</p>
+    <section
+        class="page-title-separate-breadcrumbs cover-background border-top border-4 border-color-base-color top-space-margin"
+        style="background-image: url('{{Storage::url($beasiswaUtamaItems->banner)}}')">
+        <div class="opacity-full bg-gradient-dark-transparent"></div>
+        <div class="container position-relative">
+            <div class="row align-items-start align-items-lg-end justify-content-end flex-column flex-lg-row extra-small-screen">
+                <div class="col-xxl-7 col-lg-6 col-md-10 position-relative page-title-large md-mb-10px xs-mb-5px">
+                    <h1 class="text-white alt-font fw-500 ls-minus-2px mb-0">Beasiswa</h1>
+                </div>
+                <div class="col-xxl-5 col-lg-6 col-md-10 last-paragraph-no-margin">
+                    <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100">
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <!-- end page title -->
 
-<!-- start section -->
-<section class="bg-very-light-gray background-position-center background-repeat position-relative w-100 min-vh-100" style="background-image: url('../images/vertical-center-line-bg-dark.svg')">
-    <div class="container-fluid p-0" >
-        <div class="row justify-content-center mb-6 xs-mb-9" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            <div class="col-md-8 text-center">
-                <span>Daftar Fasilitas</span>
-                <h2 class="alt-font mb-5px text-dark-gray ls-minus-2px">{{ $kampus->nama_kampus }}</h2>
-            </div>
-        </div>
-
-        <div class="row justify-content-center mb-5 xs-mb-8" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            @foreach($kampus->fasilitas as $fasilitas)
-                <div class="col-12 col-md-4 mb-30px">
-                    <div class="hover-box md-mb-30px">
-                        <img class="w-50 mx-auto d-block" src="{{ Storage::url($fasilitas->gambar) }}" alt="Gambar Fasilitas">
-                        <div class="p-30px last-paragraph-no-margin text-center">
-                            <span class="d-inline-block fs-22 alt-font">{{ $fasilitas->nama }}</span>
-                        </div>
+    <!-- start section -->
+    <section class="bg-very-light-gray background-position-center background-repeat position-relative pb-0 overflow-hidden" style="background-image: url('images/vertical-center-line-bg-dark.svg')">
+        <div class="container" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <!-- Tabel Daftar Link Website Program Studi -->
+            <div class="container mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <table class="table table-bordered text-left">
+                            <thead class="bg-purple text-white">
+                                <tr>
+                                    <th class="text-center">No</th>
+                                    <th>Program Beasiswa</th>
+                                    <th class="text-center">Detail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($beasiswaItems as $item)
+                                <tr>
+                                    <td class="text-center">{{ $loop->iteration }}</td>
+                                    <td>{{ $item->nama_beasiswa }}</td>
+                                    <td class="text-center">
+                                        <a href="{{ route('beasiswa.detail', $item->id) }}" target="_blank">Lihat</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            @endforeach
+            </div>
         </div>
-    </div>
-</section>
-
+    </section>
+    <!-- end section -->
     <!-- start footer -->
     <footer class="pb-50px sm-pt-20px xs-pb-30px bg-footer">
         <div class="container">

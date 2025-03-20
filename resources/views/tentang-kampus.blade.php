@@ -157,11 +157,11 @@
                         <ul class="navbar-nav navbar-right justify-content-start">
                         <li class="nav-item"><a href="fasilitas"
                         class="nav-link">Fasilitas</a></li>
-                            <li class="nav-item"><a href="beasiswa" class="nav-link"
-                                    onclick="return false">Beasiswa</a>
+                            <li class="nav-item"><a href="beasiswa"
+                                    class="nav-link">Beasiswa</a>
                             </li>
-                            <li class="nav-item"><a href="testimoni" class="nav-link"
-                                    onclick="return false">Testimoni</a>
+                            <li class="nav-item"><a href="testimoni"
+                                    class="nav-link">Testimoni</a>
                             </li>
                         </ul>
                     </div>
@@ -360,8 +360,8 @@
     <!-- end section -->
 
     <!-- start section -->
-    <section id="kerja-sama" class="background-position-center background-repeat"
-        style="background-image: url('images/vertical-center-line-bg.svg')">
+    <section id="kerja-sama" class="bg-very-light-gray background-position-center background-repeat"
+        style="background-image: url('images/vertical-center-line-bg-dark.svg')">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 text-center"

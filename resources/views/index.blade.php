@@ -157,10 +157,10 @@
                         <ul class="navbar-nav navbar-right justify-content-start">
                         <li class="nav-item"><a href="fasilitas"
                         class="nav-link">Fasilitas</a></li>
-                            <li class="nav-item"><a href="beasiswa" onclick="return false"
+                            <li class="nav-item"><a href="beasiswa"
                                     class="nav-link">Beasiswa</a>
                             </li>
-                            <li class="nav-item"><a href="testimoni" onclick="return false"
+                            <li class="nav-item"><a href="testimoni"
                                     class="nav-link">Testimoni</a>
                             </li>
                         </ul>
@@ -411,78 +411,17 @@
 
             <!-- Tombol Berita Selengkapnya -->
             <div class="text-center">
-                <a href="https://www.instagram.com/iwuidn/" target="_blank" class="btn px-4 py-2">
-                    Baca Berita Lainnya
+                <a href="https://www.instagram.com/iwuidn/" target="_blank" class="btn btn-extra-large btn-switch-text btn-dark-gray btn-box-shadow btn-round-edge d-inline-block align-middle me-30px xs-me-10px xs-mt-20px">
+                    <span>
+                        <span class="btn-double-text" data-text="Instagram IWU">Lihat Berita Lainnya</span>
+                    </span>
                 </a>
             </div>
             <!-- end instagram -->
         </div>
     </section>
-
     <!-- end section -->
-
-    <!-- start section -->
-    <!-- <section class="background-position-center background-repeat overlap-height position-relative"
-        style="background-image: url('images/vertical-center-line-bg.svg')">
-        <div class="container">
-            <div class="row justify-content-center mb-5 xs-mb-7">
-                <div class="col-md-8 text-center"
-                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <h2 class="alt-font mb-5px text-dark-gray ls-minus-2px">Testimoni Alumni</h2>
-                    <span class="d-inline-block">Alumni kami berbagi pengalaman luar biasa selama studi di
-                        kampus.</span>
-                </div>
-            </div>
-            <div class="row row-cols-1 row-cols-xl-2 row-cols-lg-2 row-cols-md-1 position-relative justify-content-center mb-4 sm-mb-30px"
-                data-anime='{ "el": "childs", "perspective": [800, 1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-
-                <div class="col review-style-05 md-mb-30px">
-                    <div
-                        class="border-radius-6px bg-white box-shadow-quadruple-large border border-color-extra-medium-gray last-paragraph-no-margin">
-                        <div class="d-flex align-items-center ps-45px pe-45px pt-30px pb-30px lg-p-25px">
-                            <img class="rounded-circle w-120px xs-w-80px me-25px" src="{{ asset('images/IWU/user-testimoni.jpg') }}"
-                                alt="" />
-                            <p>Selama studi di kampus, saya merasa mendapatkan dukungan penuh dari dosen dan
-                                teman-teman. Ini membantu saya berkembang baik secara akademis maupun pribadi.</p>
-                        </div>
-                        <div
-                            class="border-top border-color-extra-medium-gray pt-15px pb-15px ps-45px pe-45px lg-ps-25px lg-pe-25px text-center text-sm-start">
-                            <span class="alt-font fw-500 text-dark-gray d-inline-block xs-fs-17">Rina Setiawan, Fakultas
-                                Sains dan Teknologi</span>
-                            <div class="review-star-icon float-sm-end float-none fs-19">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col review-style-05">
-                    <div
-                        class="border-radius-6px bg-white box-shadow-quadruple-large border border-color-extra-medium-gray last-paragraph-no-margin">
-                        <div class="d-flex align-items-center ps-45px pe-45px pt-30px pb-30px lg-p-25px">
-                            <img class="rounded-circle w-120px xs-w-80px me-25px" src="{{ asset('images/IWU/user-testimoni.jpg') }}"
-                                alt="" />
-                            <p>Pengalaman saya di kampus sangat berkesan. Lingkungan yang mendukung membuat saya bisa
-                                berkembang dan meraih tujuan karier yang saya impikan.</p>
-                        </div>
-                        <div
-                            class="border-top border-color-extra-medium-gray pt-15px pb-15px ps-45px pe-45px lg-ps-25px lg-pe-25px text-center text-sm-start">
-                            <span class="alt-font fw-500 text-dark-gray d-inline-block xs-fs-17">Arianto Pratama,
-                                Fakultas Vokasi</span>
-                            <div class="review-star-icon float-sm-end float-none fs-19">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
+     
     <!-- start footer -->
     <section
         class="bg-very-light-gray mt-5 background-position-center background-repeat overlap-height position-relative"

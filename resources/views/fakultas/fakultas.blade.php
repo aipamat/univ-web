@@ -159,11 +159,9 @@
                         <ul class="navbar-nav navbar-right justify-content-start">
                         <li class="nav-item"><a href="fasilitas"
                         class="nav-link">Fasilitas</a></li>
-                            <li class="nav-item"><a href="beasiswa" class="nav-link"
-                                    onclick="return false">Beasiswa</a>
+                            <li class="nav-item"><a href="beasiswa" class="nav-link">Beasiswa</a>
                             </li>
-                            <li class="nav-item"><a href="testimoni" class="nav-link"
-                                    onclick="return false">Testimoni</a>
+                            <li class="nav-item"><a href="testimoni" class="nav-link">Testimoni</a>
                             </li>
                         </ul>
                     </div>
@@ -214,7 +212,7 @@
                 </div>
                 <div class="col-lg-5 bg-very-light-gray">
                     <div class="pt-13 pb-12 ps-15 pe-15 lg-p-8 last-paragraph-no-margin">
-                        <a href="{{ route('fakultas.detail', ['id' => $fakultasUtamaFST->id]) }}">
+                        <a href="{{ route('fakultas.detail', ['id' => $fakultasUtamaFST->id]) }}" target="_blank">
                             <h4 class="alt-font text-dark-gray mb-20px ls-minus-1px d-inline-block">{{$fakultasUtamaFST->nama_fakultas}}
                             </h4>
                         </a>
@@ -223,7 +221,7 @@
                     </div>
                     <div
                         class="ps-15 pe-15 pt-5 pb-5 lg-ps-8 lg-pe-8 border-top border-color-transparent-dark-very-light align-items-center d-flex justify-content-center">
-                        <a href="{{ route('fakultas.detail', ['id' => $fakultasUtamaFST->id]) }}"
+                        <a href="{{ route('fakultas.detail', ['id' => $fakultasUtamaFST->id]) }}" target="_blank"
                             class="btn btn-medium btn-switch-text btn-base-color btn-box-shadow btn-round-edge d-inline-block align-middle xs-ms-auto">
                             <span>
                                 <span class="btn-double-text" data-text="Lihat Selengkapnya">Lihat Selengkapnya</span>
