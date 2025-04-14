@@ -30,7 +30,6 @@
             <div class="container-fluid py-1">
                 <div class="row align-items-center top-bar">
                     <div class="col-12 d-flex justify-content-between">
-                        <!-- Language Options with Icons (Left Side) -->
                         <div class="d-flex align-items-center">
                             <div class="h-100 d-inline-flex align-items-center">
                                 <a class="btn btn-sm-square" target="_blank" href="https://www.instagram.com/iwuidn/"><i
@@ -50,7 +49,6 @@
                             </div>
                         </div>
 
-                        <!-- Links (Right Side) -->
                         <div class="d-flex align-items-center text-dark flex-grow-1 justify-content-end">
                             <div class="h-100 d-inline-flex align-items-center me-3">
                                 <a class="text-center d-flex align-items-center p-md-3 text-dark" target="_blank"

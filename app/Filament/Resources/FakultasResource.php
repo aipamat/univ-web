@@ -59,7 +59,6 @@ class FakultasResource extends Resource
                 ->minLength(5)
                 ->maxLength(100)
                 ->columnSpan(2)
-                ->unique()
                 ->required(),
             ]);
     }
