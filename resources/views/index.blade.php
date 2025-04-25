@@ -275,7 +275,7 @@
             </div>
         </div>
 
-    </section>
+    </section>  
     <!-- end section -->
     <!-- start section -->
     <section class="bg-very-light-gray overlap-height position-relative background-position-center background-repeat"

@@ -162,7 +162,7 @@
                             <li class="nav-item"><a href="../beasiswa"
                                     class="nav-link">Beasiswa</a>
                             </li>
-                            <li class="nav-item"><a href="testimoni"
+                            <li class="nav-item"><a href="../testimoni"
                                     class="nav-link">Testimoni</a>
                             </li>
                         </ul>
