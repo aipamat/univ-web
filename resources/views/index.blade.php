@@ -4,9 +4,10 @@
 @section('content')
 <!-- start banner slider -->
     <section
-    class="p-0 top-space-margin full-screen md-h-600px sm-h-500px border-top border-4 border-color-base-color position-relative"
+    class="p-0 top-space-margin full-screen md-h-600px sm-h-500px border-top border-4 border-color-base-color position-relative tw-lazy"
     data-parallax-background-ratio="0.3"
-    style="background-image: url('{{ Storage::url($beranda->banner) }}')">
+    style="background-image: url('{{ Storage::url($beranda->banner) }}')"
+    loading="lazy">
         <div class="opacity-light bg-black"></div>
         <div class="container h-100 position-relative">
             <div class="row align-items-center h-100 justify-content-center">
@@ -72,12 +73,12 @@
                             Sejak</span>2008</span>
                     <div class="w-75 overflow-hidden position-relative xs-w-80 border-radius-4px float-end"
                         data-anime='{ "effect": "slide", "color": "#d418a4", "direction":"rl", "easing": "easeOutQuad", "duration": 600, "delay":400}'>
-                        <img class="w-100" src="{{ Storage::url($beranda->gambar_dekorasi_besar) }}" alt="">
+                        <img class="w-100 tw-lazy" src="{{ Storage::url($beranda->gambar_dekorasi_besar) }}" loading="lazy" alt="">
                     </div>
                     <div class="position-absolute left-minus-70px md-left-15px bottom-minus-50px w-55 overflow-hidden"
                         data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)"
                         data-anime='{ "effect": "slide", "color": "#ffffff", "direction":"lr", "easing": "easeOutQuad", "duration": 600, "delay":500}'>
-                        <img class="w-100 border-radius-4px" src="{{ Storage::url($beranda->gambar_dekorasi_kecil) }}" alt="">
+                        <img class="w-100 border-radius-4px tw-lazy" src="{{ Storage::url($beranda->gambar_dekorasi_kecil) }}" loading="lazy" alt="">
                     </div>
                 </div>
             </div>
