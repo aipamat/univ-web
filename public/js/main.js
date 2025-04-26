@@ -2328,15 +2328,16 @@
 
         var scrollPos = $(window).scrollTop();
 
-        // One page navigation
+        // One page navigation (modified)
         var menuLinks = $('.navbar-nav li a');
         menuLinks.each(function () {
             var _this = $(this);
-            var hasPos = _this.attr('href').indexOf('#');
+            var href = _this.attr('href');
+            var hasPos = href.indexOf('#');
             if (hasPos > -1) {
-                var res = _this.attr('href').substring(hasPos);
-                if (res != '' && res != '#' && $(res).length) {
-                    var refElement = $(_this.attr('href'));
+                var res = href.substring(hasPos);
+                if (res !== '' && res !== '#' && $(res).length) {
+                    var refElement = $(res);
                     if (refElement.position().top <= (scrollPos + 60) && refElement.position().top + refElement.height() > (scrollPos + 60)) {
                         menuLinks.removeClass('active');
                         _this.addClass('active');

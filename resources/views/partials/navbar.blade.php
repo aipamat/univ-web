@@ -85,28 +85,28 @@
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li>
-                                        <a href="#visi-misi">
+                                        <a href="{{url('/tentang-kampus#visi-misi')}}">
                                             <div class="submenu-icon-content">
                                                 <span>Visi Misi</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#pimpinan">
+                                        <a href="{{url('/tentang-kampus#pimpinan')}}">
                                             <div class="submenu-icon-content">
                                                 <span>Pimpinan</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#struktur-organisasi">
+                                        <a href="{{url('/tentang-kampus#struktur-organisasi')}}">
                                             <div class="submenu-icon-content">
                                                 <span>Struktur Organisasi</span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#kerja-sama">
+                                        <a href="{{url('/tentang-kampus#kerja-sama')}}">
                                             <div class="submenu-icon-content">
                                                 <span>Kerja Sama</span>
                                             </div>
