@@ -187,7 +187,7 @@
                 @if ($pimpinanSpeech)
                     <!-- Gambar di atas -->
                     <div class="info-image mb-3 text-center">
-                        <img src="{{ Storage::url($pimpinanSpeech->foto) }}" alt="Pimpinan" class="img-fluid" style="max-width: 150px;">
+                        <img class='tw-mx-auto tw-my-auto' src="{{ Storage::url($pimpinanSpeech->foto) }}" alt="Pimpinan" class="img-fluid" style="max-width: 150px;">
                     </div>
                     
                     <!-- Nama Pimpinan -->
@@ -258,7 +258,7 @@
             data-anime='{ "el": "childs", "perspective": [800, 1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
             <div class="row overlap-section">
                 <div class="col-12 text-center">
-                    <img class="rounded" src="{{ asset('images/IWU/logo-171x171.png') }}" alt="" />
+                    <img class="rounded tw-mx-auto tw-my-auto" src="{{ asset('images/IWU/logo-171x171.png') }}" alt="" />
                 </div>
             </div>
             <!-- start subscribe item -->

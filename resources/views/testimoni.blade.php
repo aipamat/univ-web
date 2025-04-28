@@ -32,7 +32,7 @@
                 data-anime='{ "el": "childs", "perspective": [800, 1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
 
                 @foreach($testimoniItems as $testimoni)
-                <div class="col review-style-05 md-mb-30px">
+                <div class="col review-style-05 tw-my-[30px]">
                     <div
                         class="border-radius-6px bg-white box-shadow-quadruple-large border border-color-extra-medium-gray last-paragraph-no-margin">
                         <div class="d-flex align-items-center ps-45px pe-45px pt-30px pb-30px lg-p-25px">
