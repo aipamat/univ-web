@@ -24,13 +24,17 @@ class Fakultas extends Model
     public function dekan()
     {
         return $this->hasOne(Pimpinan::class, 'id_fakultas', 'id')
-                    ->where('status', 'Dekan');
+            ->where('status', 'Dekan');
     }
 
     public function daftarKaprodi()
     {
         return $this->hasMany(Pimpinan::class, 'id_fakultas', 'id')
-                    ->where('status', 'Kepala Prodi');
+            ->where('status', 'Kepala Prodi');
     }
 
+    public function kataSambutan()
+    {
+        return $this->hasOne(Pimpinan::class, 'id_fakultas', 'id');
+    }
 }

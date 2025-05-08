@@ -32,7 +32,7 @@
                     <p>{{ $fakultas->dekan->nama ?? 'Belum ada dekan' }}</p>
                 </div>
                 <div class="col-md-8">
-                    <p class="text-dark-gray">{{ $fakultas->deskripsi }}</p>
+                    <p class="text-dark-gray">{!! $fakultas->kataSambutan->kata_sambutan !!}</p>
                 </div>
             </div>
         </div>
