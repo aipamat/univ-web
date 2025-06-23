@@ -21,6 +21,8 @@ class TestimoniUtamaResource extends Resource
 {
     protected static ?string $model = TestimoniUtama::class;
 
+    protected static ?string $navigationGroup = 'Testimoni';
+    protected static ?string $navigationLabel = 'Testimoni Utama';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
@@ -28,11 +30,11 @@ class TestimoniUtamaResource extends Resource
         return $form
             ->schema([
                 FileUpload::make('banner_utama')
-                ->label('Banner Halaman Utama')
-                ->helperText('Harus ukuran (1920x526).')
-                ->image()
-                ->columnSpan(2)
-                ->required()
+                    ->label('Banner Halaman Utama')
+                    ->helperText('Harus ukuran (1920x526).')
+                    ->image()
+                    ->columnSpan(2)
+                    ->required()
 
             ]);
     }
@@ -42,7 +44,7 @@ class TestimoniUtamaResource extends Resource
         return $table
             ->columns([
                 ImageColumn::make('banner')
-                ->label('Banner')
+                    ->label('Banner')
             ])
             ->filters([
                 //

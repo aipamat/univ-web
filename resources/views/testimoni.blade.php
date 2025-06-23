@@ -1,9 +1,10 @@
 @extends('layouts.app')
 @section('title', 'International Women University | Testimoni Alumni')
 @section('content')
+    <!-- Section: Banner -->
     <section
         class="page-title-separate-breadcrumbs cover-background border-top border-4 border-color-base-color top-space-margin"
-        style="background-image: url('{{Storage::url($testimoniUtama->banner_utama)}}')">
+        style="background-image: url('{{ Storage::url($testimoniUtama->banner_utama) }}')">
         <div class="opacity-full bg-gradient-dark-transparent"></div>
         <div class="container position-relative">
             <div class="row align-items-start align-items-lg-end justify-content-end flex-column flex-lg-row extra-small-screen"
@@ -16,9 +17,10 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Section: Testimoni -->
     <section class="background-position-center background-repeat overlap-height position-relative"
-    style="background-image: url('images/vertical-center-line-bg.svg')">
+        style="background-image: url('images/vertical-center-line-bg.svg')">
         <div class="container">
             <div class="row justify-content-center mb-5 xs-mb-7">
                 <div class="col-md-8 text-center"
@@ -28,34 +30,36 @@
                 </div>
             </div>
 
-            <div class="row row-cols-1 row-cols-xl-2 row-cols-lg-2 row-cols-md-1 position-relative justify-content-center mb-4 sm-mb-30px"
+            <!-- Cards -->
+            <div class="row row-cols-1 row-cols-xl-2 row-cols-lg-2 row-cols-md-1 justify-content-center"
                 data-anime='{ "el": "childs", "perspective": [800, 1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 900, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
 
                 @foreach($testimoniItems as $testimoni)
-                <div class="col review-style-05 tw-my-[30px]">
-                    <div
-                        class="border-radius-6px bg-white box-shadow-quadruple-large border border-color-extra-medium-gray last-paragraph-no-margin">
-                        <div class="d-flex align-items-center ps-45px pe-45px pt-30px pb-30px lg-p-25px">
-                            <img class="rounded-circle w-120px xs-w-80px me-25px"
-                                src="{{ asset('storage/' . $testimoni->foto) }}" alt="Foto Alumni" />
-                            <p>{!! $testimoni->deskripsi !!}</p>
-                        </div>
+                    <div class="col tw-my-[15px] d-flex mt-3">
                         <div
-                            class="border-top border-color-extra-medium-gray pt-15px pb-15px ps-45px pe-45px lg-ps-25px lg-pe-25px text-center text-sm-start">
-                            <p class="alt-font fw-500 text-dark-gray xs-fs-17">
-                                {{ $testimoni->nama }},
-                                <span>{{ $testimoni->fakultas->nama_fakultas ?? 'Tidak ada fakultas' }}</span>
-                                <br>
-                                <span>{{ $testimoni->programStudi->nama_prodi ?? 'Tidak ada prodi' }}</span>, Angkatan
-                                <span>{{ $testimoni->angkatan }}</span>
-                            </p>
+                            class="border-radius-6px bg-white box-shadow-quadruple-large border border-color-extra-medium-gray last-paragraph-no-margin w-100 d-flex flex-column h-100 p-0">
+
+                            <!-- Konten Utama -->
+                            <div class="d-flex align-items-start p-4 flex-grow-1">
+                                <img class="rounded-circle w-120px xs-w-80px me-4 mt-1"
+                                    src="{{ asset('storage/' . $testimoni->foto) }}" alt="Foto Alumni" />
+                                <p class="mb-0" style="min-height: 140px;">{!! $testimoni->deskripsi !!}</p>
+                            </div>
+
+                            <!-- Footer Identitas -->
+                            <div class="border-top border-color-extra-medium-gray py-3 px-4 text-center text-sm-start">
+                                <p class="alt-font fw-500 text-dark-gray xs-fs-17 mb-0">
+                                    {{ $testimoni->nama }},
+                                    <span>{{ $testimoni->fakultas->nama_fakultas ?? 'Tidak ada fakultas' }}</span><br>
+                                    <span>{{ $testimoni->programStudi->nama_prodi ?? 'Tidak ada prodi' }}</span>,
+                                    Angkatan <span>{{ $testimoni->angkatan }}</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
 
             </div>
         </div>
     </section>
-    {{-- end section  --}}
 @endsection

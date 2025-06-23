@@ -98,13 +98,13 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a href="{{url('/tentang-kampus#struktur-organisasi')}}">
                                             <div class="submenu-icon-content">
                                                 <span>Struktur Organisasi</span>
                                             </div>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <a href="{{url('/tentang-kampus#kerja-sama')}}">
                                             <div class="submenu-icon-content">

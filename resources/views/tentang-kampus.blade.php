@@ -161,7 +161,7 @@
     </section>
     <!-- end section -->
 
-    <!-- start section -->
+    {{-- <!-- start section -->
     <section id="struktur-organisasi" class="background-position-center background-repeat position-relative"
         style="background-image: url('images/vertical-center-line-bg.svg')">
         <div class="container">
@@ -181,7 +181,7 @@
             </div>
         </div>
     </section>
-    <!-- end section -->
+    <!-- end section --> --}}
 
     <!-- end section -->
 
