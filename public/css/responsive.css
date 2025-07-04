@@ -20251,7 +20251,7 @@
     padding-right: 0;
   }
   header .header-top-bar {
-    display: none;
+    opacity: 0;
     height: 0;
   }
   header .header-top-bar + .navbar {

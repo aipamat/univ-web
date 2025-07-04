@@ -51,11 +51,17 @@
     <script>
         window.addEventListener('load', function(){
             const preloader = document.getElementById('preloader');
-            preloader.style.opacity = '0';
+            const header = document.querySelector('header');
+            // header.style.display = 'none';
+
+            preloader.style.opacity = '100';
             preloader.style.transition = 'opacity 0.5s ease-in-out';
+            // preloader.style.zIndex = 9999;
+
             // Setelah 0.5 detik, sembunyikan preloader
             setTimeout(() => {
                 preloader.style.display = 'none';
+                header.style.visibility = 'visible';
             }, 300);
             
             // Trigger ulang animasi

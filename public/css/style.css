@@ -6763,6 +6763,10 @@ input:focus, select:focus, textarea:focus, .form-control:focus {
 /* ===================================
    10. Header
 ====================================== */
+header {
+  visibility: hidden;
+}
+
 header .header-top-bar [class*=col-] {
   display: -webkit-box;
   display: -ms-flexbox;
